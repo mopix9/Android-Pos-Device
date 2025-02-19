@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.fanap.sina.main.viewmodel.TransactionExceptionViewModel" />
+    </data>
+
+
+    <FrameLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        tools:context=".view.fragments.CategoryFragment">
+
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    android:background="@color/colorPrimaryDark">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="تسویه با مرکز"
+                        android:textSize="@dimen/titre"
+                        android:gravity="center"
+                        android:fontFamily="@font/iransansbold"
+                        android:textColor="@color/white"
+                        android:padding="6dp"/>
+
+                </LinearLayout>
+
+
+                <com.wang.avi.AVLoadingIndicatorView
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/loading"
+                    style="@style/AVLoadingIndicatorView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    app:indicatorColor="@color/colorAccent"
+                    app:indicatorName="BallPulseIndicator" />
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/title"
+                    android:fontFamily="@font/iransans"
+                    android:textColor="@color/slate"
+                    android:text="در حال تسویه آخرین تراکنش با مرکز"
+                    />
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+</layout>

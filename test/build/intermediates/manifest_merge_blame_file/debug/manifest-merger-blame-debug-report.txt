@@ -1,0 +1,238 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.fanap.test"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->C:\Users\MR safari\StudioProjects\pos\test\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="31" />
+9-->C:\Users\MR safari\StudioProjects\pos\test\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\MR safari\StudioProjects\pos\test\src\main\AndroidManifest.xml:5:5-67
+11-->C:\Users\MR safari\StudioProjects\pos\test\src\main\AndroidManifest.xml:5:22-64
+12    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+12-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-76
+12-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:22-73
+13    <uses-permission
+13-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-13:54
+14        android:name="android.permission.SET_TIME"
+14-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:9-51
+15        android:protectionLevel="signature|system" />
+15-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:9-51
+16    <uses-permission android:name="android.permission.INTERNAL_SYSTEM_WINDOW" />
+16-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:14:5-81
+16-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:14:22-78
+17    <uses-permission android:name="com.pos.permission.ACCESSORY_DATETIME" />
+17-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:5-77
+17-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:22-74
+18    <uses-permission android:name="com.pos.permission.ACCESSORY_LED" />
+18-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:5-72
+18-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:22-69
+19    <uses-permission android:name="com.pos.permission.ACCESSORY_BEEP" />
+19-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:17:5-73
+19-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:17:22-70
+20    <uses-permission android:name="com.pos.permission.CARD_READER_ICC" />
+20-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:18:5-74
+20-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:18:22-71
+21    <uses-permission android:name="com.pos.permission.CARD_READER_PICC" />
+21-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:19:5-75
+21-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:19:22-72
+22    <uses-permission android:name="com.pos.permission.CARD_READER_MAG" />
+22-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:20:5-74
+22-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:20:22-71
+23    <uses-permission android:name="com.pos.permission.COMMUNICATION" />
+23-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:21:5-72
+23-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:21:22-69
+24    <uses-permission android:name="com.pos.permission.PRINTER" />
+24-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:22:5-66
+24-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:22:22-63
+25    <uses-permission android:name="com.pos.permission.SECURITY" />
+25-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:23:5-67
+25-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:23:22-64
+26    <uses-permission android:name="com.pos.permission.ACCESSORY_RFREGISTER" />
+26-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:24:5-79
+26-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:24:22-76
+27    <uses-permission android:name="com.pos.permission.EMVCORE" />
+27-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:25:5-66
+27-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:25:22-63
+28    <uses-permission android:name="android.permission.CAMERA" />
+28-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:26:5-65
+28-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:26:22-62
+29    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+29-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:27:5-80
+29-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:27:22-77
+30    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+30-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:28:5-81
+30-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:28:22-78
+31    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+31-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:29:5-79
+31-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:29:22-76
+32    <uses-permission android:name="android.permission.CALL_PHONE" />
+32-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:31:5-69
+32-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:31:22-66
+33    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+33-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:32:5-75
+33-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:32:22-72
+34    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+34-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:33:5-73
+34-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:33:22-70
+35    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+35-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:34:5-80
+35-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:34:22-77
+36    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+36-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:35:5-84
+36-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:35:22-81
+37    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- NewLand Permissions -->
+37-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:36:5-78
+37-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:36:22-75
+38    <uses-permission android:name="android.permission.MANAGE_NEWLAND" />
+38-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:37:5-73
+38-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:37:22-70
+39    <uses-permission android:name="android.permission.MANAGE_NEWLANDUART3" />
+39-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:38:5-78
+39-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:38:22-75
+40    <uses-permission android:name="android.permission.MANAGE_NEWLAND_CASHBOX" />
+40-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:39:5-81
+40-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:39:22-78
+41    <uses-permission android:name="android.permission.MANAGE_NEWLAN_CASHBOX" />
+41-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:40:5-80
+41-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:40:22-77
+42    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+42-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:28:5-81
+42-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:28:22-78
+43    <uses-permission android:name="android.permission.MANAGE_NEWLANDMODEM" />
+43-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:42:5-78
+43-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:42:22-75
+44    <uses-permission android:name="android.permission.CAMERA" />
+44-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:26:5-65
+44-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:26:22-62
+45    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+45-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:44:5-71
+45-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:44:22-68
+46    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+46-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:32:5-75
+46-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:32:22-72
+47    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+47-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:35:5-84
+47-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:35:22-81
+48    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+48-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:33:5-73
+48-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:33:22-70
+49    <uses-permission android:name="android.permission.MODIFY_PHONE_STATE" />
+49-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:48:5-77
+49-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:48:22-74
+50    <uses-permission android:name="android.permission.BLUETOOTH" />
+50-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:50:5-68
+50-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:50:22-65
+51    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+51-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:51:5-74
+51-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:51:22-71
+52    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+52-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:52:5-81
+52-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:52:22-78
+53    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+53-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:53:5-79
+53-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:53:22-76
+54    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+54-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:54:5-79
+54-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:54:22-76
+55
+56    <application
+56-->C:\Users\MR safari\StudioProjects\pos\test\src\main\AndroidManifest.xml:7:5-35:19
+57        android:name="com.fanap.test.App"
+57-->C:\Users\MR safari\StudioProjects\pos\test\src\main\AndroidManifest.xml:8:9-28
+58        android:allowBackup="true"
+58-->C:\Users\MR safari\StudioProjects\pos\test\src\main\AndroidManifest.xml:9:9-35
+59        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+59-->[androidx.core:core:1.7.0] C:\Users\MR safari\.gradle\caches\transforms-3\02f871aa2f607436acd46299662a1de5\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
+60        android:debuggable="true"
+61        android:icon="@mipmap/ic_launcher"
+61-->C:\Users\MR safari\StudioProjects\pos\test\src\main\AndroidManifest.xml:10:9-43
+62        android:label="@string/app_name"
+62-->C:\Users\MR safari\StudioProjects\pos\test\src\main\AndroidManifest.xml:11:9-41
+63        android:roundIcon="@mipmap/ic_launcher_round"
+63-->C:\Users\MR safari\StudioProjects\pos\test\src\main\AndroidManifest.xml:12:9-54
+64        android:supportsRtl="true"
+64-->C:\Users\MR safari\StudioProjects\pos\test\src\main\AndroidManifest.xml:13:9-35
+65        android:theme="@style/Theme.CorePos" >
+65-->C:\Users\MR safari\StudioProjects\pos\test\src\main\AndroidManifest.xml:14:9-45
+66        <activity
+66-->C:\Users\MR safari\StudioProjects\pos\test\src\main\AndroidManifest.xml:16:9-18:52
+67            android:name="com.fanap.corepos.device.hsm.sayan.amp.AmpPinActivity"
+67-->C:\Users\MR safari\StudioProjects\pos\test\src\main\AndroidManifest.xml:17:13-81
+68            android:screenOrientation="portrait" />
+68-->C:\Users\MR safari\StudioProjects\pos\test\src\main\AndroidManifest.xml:18:13-49
+69        <activity
+69-->C:\Users\MR safari\StudioProjects\pos\test\src\main\AndroidManifest.xml:19:9-27:20
+70            android:name="com.fanap.test.MainActivity"
+70-->C:\Users\MR safari\StudioProjects\pos\test\src\main\AndroidManifest.xml:20:13-41
+71            android:exported="true" >
+71-->C:\Users\MR safari\StudioProjects\pos\test\src\main\AndroidManifest.xml:21:13-36
+72            <intent-filter>
+72-->C:\Users\MR safari\StudioProjects\pos\test\src\main\AndroidManifest.xml:22:13-26:29
+73                <action android:name="android.intent.action.MAIN" />
+73-->C:\Users\MR safari\StudioProjects\pos\test\src\main\AndroidManifest.xml:23:17-69
+73-->C:\Users\MR safari\StudioProjects\pos\test\src\main\AndroidManifest.xml:23:25-66
+74
+75                <category android:name="android.intent.category.LAUNCHER" />
+75-->C:\Users\MR safari\StudioProjects\pos\test\src\main\AndroidManifest.xml:25:17-77
+75-->C:\Users\MR safari\StudioProjects\pos\test\src\main\AndroidManifest.xml:25:27-74
+76            </intent-filter>
+77        </activity>
+78
+79        <uses-library
+79-->C:\Users\MR safari\StudioProjects\pos\test\src\main\AndroidManifest.xml:29:9-31:40
+80            android:name="com.pos.device"
+80-->C:\Users\MR safari\StudioProjects\pos\test\src\main\AndroidManifest.xml:30:13-42
+81            android:required="false" />
+81-->C:\Users\MR safari\StudioProjects\pos\test\src\main\AndroidManifest.xml:31:13-37
+82        <uses-library
+82-->C:\Users\MR safari\StudioProjects\pos\test\src\main\AndroidManifest.xml:32:9-34:40
+83            android:name="com.pos.sdk"
+83-->C:\Users\MR safari\StudioProjects\pos\test\src\main\AndroidManifest.xml:33:13-39
+84            android:required="false" />
+84-->C:\Users\MR safari\StudioProjects\pos\test\src\main\AndroidManifest.xml:34:13-37
+85
+86        <activity
+86-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:57:9-59:40
+87            android:name="com.fanap.corepos.device.hsm.aryan.newland.KeyBoardNumberActivity"
+87-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:58:13-93
+88            android:exported="false" />
+88-->[:corepos] C:\Users\MR safari\StudioProjects\pos\corepos\build\intermediates\merged_manifest\debug\AndroidManifest.xml:59:13-37
+89
+90        <provider
+90-->[androidx.emoji2:emoji2:1.0.0] C:\Users\MR safari\.gradle\caches\transforms-3\c6fef052707e0d75c14d83db6822b6cd\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+91            android:name="androidx.startup.InitializationProvider"
+91-->[androidx.emoji2:emoji2:1.0.0] C:\Users\MR safari\.gradle\caches\transforms-3\c6fef052707e0d75c14d83db6822b6cd\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
+92            android:authorities="com.fanap.test.androidx-startup"
+92-->[androidx.emoji2:emoji2:1.0.0] C:\Users\MR safari\.gradle\caches\transforms-3\c6fef052707e0d75c14d83db6822b6cd\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
+93            android:exported="false" >
+93-->[androidx.emoji2:emoji2:1.0.0] C:\Users\MR safari\.gradle\caches\transforms-3\c6fef052707e0d75c14d83db6822b6cd\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
+94            <meta-data
+94-->[androidx.emoji2:emoji2:1.0.0] C:\Users\MR safari\.gradle\caches\transforms-3\c6fef052707e0d75c14d83db6822b6cd\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+95                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+95-->[androidx.emoji2:emoji2:1.0.0] C:\Users\MR safari\.gradle\caches\transforms-3\c6fef052707e0d75c14d83db6822b6cd\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
+96                android:value="androidx.startup" />
+96-->[androidx.emoji2:emoji2:1.0.0] C:\Users\MR safari\.gradle\caches\transforms-3\c6fef052707e0d75c14d83db6822b6cd\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
+97            <meta-data
+97-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\MR safari\.gradle\caches\transforms-3\dad924d36aa2af0a32f36df161e996a3\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+98                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+98-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\MR safari\.gradle\caches\transforms-3\dad924d36aa2af0a32f36df161e996a3\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+99                android:value="androidx.startup" />
+99-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\MR safari\.gradle\caches\transforms-3\dad924d36aa2af0a32f36df161e996a3\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+100        </provider>
+101
+102        <service
+102-->[androidx.room:room-runtime:2.3.0] C:\Users\MR safari\.gradle\caches\transforms-3\271c3288680bf60ecf8f50dbd2f05441\transformed\room-runtime-2.3.0\AndroidManifest.xml:25:9-28:40
+103            android:name="androidx.room.MultiInstanceInvalidationService"
+103-->[androidx.room:room-runtime:2.3.0] C:\Users\MR safari\.gradle\caches\transforms-3\271c3288680bf60ecf8f50dbd2f05441\transformed\room-runtime-2.3.0\AndroidManifest.xml:26:13-74
+104            android:directBootAware="true"
+104-->[androidx.room:room-runtime:2.3.0] C:\Users\MR safari\.gradle\caches\transforms-3\271c3288680bf60ecf8f50dbd2f05441\transformed\room-runtime-2.3.0\AndroidManifest.xml:27:13-43
+105            android:exported="false" />
+105-->[androidx.room:room-runtime:2.3.0] C:\Users\MR safari\.gradle\caches\transforms-3\271c3288680bf60ecf8f50dbd2f05441\transformed\room-runtime-2.3.0\AndroidManifest.xml:28:13-37
+106    </application>
+107
+108</manifest>

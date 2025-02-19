@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:id="@+id/main"
+        android:background="@color/light_gray"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".buy.view.AmountFragment">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/top_background2">
+
+            <ImageButton
+                android:id="@+id/back"
+                android:src="@drawable/chevron_icon"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="18dp"
+                android:layout_width="56dp"
+                android:background="@color/transparent"
+                android:scaleType="centerInside"
+                android:layout_height="56dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_marginTop="18dp"
+                android:gravity="center"
+                android:textSize="@dimen/titre"
+                android:fontFamily="@font/iransansbold"
+                android:textColor="@color/white"
+                android:layout_alignBaseline="@id/back"
+                android:layout_toLeftOf="@id/back"
+                android:text="پیکربندی" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="90dp"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <FrameLayout
+                android:focusableInTouchMode="true"
+                android:id="@+id/bank_configuration"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/white_background">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="right|center_vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:text="پیکربندی بانکی"
+                        android:fontFamily="@font/iransansbold"
+                        android:textSize="@dimen/titre"
+                        android:textColor="@color/dark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/path"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <requestFocus/>
+            </FrameLayout>
+
+            <FrameLayout
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:id="@+id/receipt_type"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/white_background">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="right|center_vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:text="نوع رسید"
+                        android:fontFamily="@font/iransansbold"
+                        android:textSize="@dimen/titre"
+                        android:textColor="@color/dark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/path"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_marginTop="10dp"
+                android:id="@+id/file_manager"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/white_background">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="right|center_vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:text="مدیریت فایل"
+                        android:fontFamily="@font/iransansbold"
+                        android:textSize="@dimen/titre"
+                        android:textColor="@color/dark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:layout_marginTop="5dp"
+                        android:text="مشاهده فایل های دستگاه"
+                        android:fontFamily="@font/iransansbold"
+                        android:textSize="@dimen/title"
+                        android:textColor="@color/blue_gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:visibility="gone"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/path"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:visibility="visible"
+                android:id="@+id/update_configuration"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/white_background">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="right|center_vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:text="تنظیمات به روزرسانی"
+                        android:fontFamily="@font/iransansbold"
+                        android:textSize="@dimen/titre"
+                        android:textColor="@color/dark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/path"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:visibility="gone"
+                android:id="@+id/kargozari"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/white_background">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="right|center_vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:text="تراکنش کارگزاری"
+                        android:fontFamily="@font/iransansbold"
+                        android:textSize="@dimen/titre"
+                        android:textColor="@color/dark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/path"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/white_background">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="right|center_vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:text="خرید شناسه دار"
+                        android:fontFamily="@font/iransansbold"
+                        android:textSize="@dimen/titre"
+                        android:textColor="@color/dark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/iransansbold"
+                        android:textSize="@dimen/title"
+                        android:textColor="@color/blue_gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/path"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+</layout>

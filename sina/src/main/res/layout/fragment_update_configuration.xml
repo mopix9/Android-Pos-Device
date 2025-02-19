@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".buy.view.AmountFragment">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_marginLeft="19dp"
+                    android:layout_marginRight="19dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="20dp">
+
+
+                        <TextView
+                            android:id="@+id/title"
+                            android:fontFamily="@font/iransansbold"
+                            android:text="بازه چک کردن به روزرسانی را به دقیقه مشخص کنید"
+                            android:textSize="@dimen/titre"
+                            android:textColor="@color/dark"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/light_periwinkle"/>
+
+                    <FrameLayout
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/edittext_background"
+                        android:layout_width="match_parent"
+                        android:layout_height="53dp"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp">
+
+                        <EditText
+                            android:textDirection="ltr"
+                            android:singleLine="true"
+                            android:maxLength="4"
+                            android:fontFamily="@font/iransansbold"
+                            android:gravity="center"
+                            android:background="@color/transparent"
+                            android:id="@+id/edt_minutes"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="دقیقه"
+                            android:inputType="number" />
+
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:paddingTop="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/cancel"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="0.35"
+                            android:backgroundTint="@color/cansel"
+                            android:fontFamily="@font/iransansbold"
+                            android:text="@string/cansel"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/title" />
+
+                        <Button
+                            android:id="@+id/confirm"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_weight="0.65"
+                            android:backgroundTint="@color/green"
+                            android:drawableLeft="@drawable/flash_icon"
+                            android:fontFamily="@font/iransansbold"
+                            android:paddingLeft="20dp"
+                            android:text="@string/confirm"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/title"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </FrameLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

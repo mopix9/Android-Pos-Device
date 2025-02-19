@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="@dimen/aryan_receipt_width"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/root"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="@dimen/aryan_receipt_width"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10px"
+                android:fontFamily="@font/yekan"
+                android:includeFontPadding="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/aryan_receipt_text_size"
+                tools:text="سرجمع" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="3px"
+            android:layout_width="@dimen/aryan_receipt_width"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/yekan"
+                android:includeFontPadding="false"
+                android:text="Time"
+                android:textColor="@color/black"
+                android:textSize="@dimen/aryan_receipt_text_size" />
+
+            <TextView
+                android:id="@+id/txt_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:fontFamily="@font/yekan"
+                tools:text="Date"
+                android:includeFontPadding="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/aryan_receipt_text_size" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_marginTop="3px"
+            android:layout_width="@dimen/aryan_receipt_width"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/yekan"
+                android:includeFontPadding="false"
+                android:text="شماره پایانه"
+                android:textColor="@color/black"
+                android:textSize="@dimen/aryan_receipt_text_size" />
+
+            <TextView
+                android:id="@+id/txt_terminal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:fontFamily="@font/yekan"
+                android:includeFontPadding="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/aryan_receipt_text_size" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="3px"
+            android:layout_width="@dimen/aryan_receipt_width"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_az"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/yekan"
+                android:includeFontPadding="false"
+                android:text="از "
+                android:layout_alignParentRight="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/aryan_receipt_text_small_size" />
+
+            <TextView
+                android:id="@+id/txt_start_date"
+                android:layout_toLeftOf="@id/txt_az"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/yekan"
+                android:includeFontPadding="false"
+                android:text="Start Date"
+                android:textColor="@color/black"
+                android:textSize="@dimen/aryan_receipt_text_small_size" />
+
+            <TextView
+                android:id="@+id/txt_ta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/yekan"
+                android:includeFontPadding="false"
+                android:text="تا "
+                android:layout_toRightOf="@id/txt_end_date"
+                android:textColor="@color/black"
+                android:textSize="@dimen/aryan_receipt_text_small_size" />
+
+
+            <TextView
+                android:id="@+id/txt_end_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                tools:text="End Date"
+                android:fontFamily="@font/yekan"
+                android:includeFontPadding="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/aryan_receipt_text_small_size" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_marginTop="3dp"
+            android:layout_width="@dimen/aryan_receipt_width"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight=".37"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/yekan"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/aryan_receipt_text_size"
+                    android:text="مبلغ" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight=".37"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/yekan"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/aryan_receipt_text_size"
+                    android:text="تعداد" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight=".26"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/yekan"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/aryan_receipt_text_size"
+                    android:text="نوع" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_buy_amount"
+                    android:layout_width="0dp"
+                    android:layout_weight=".35"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/yekan"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/aryan_receipt_text_size" />
+
+                <TextView
+                    android:id="@+id/txt_buy_count"
+                    android:layout_width="0dp"
+                    android:layout_weight=".35"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/yekan"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/aryan_receipt_text_size" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight=".30"
+                    android:gravity="right"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/yekan"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/aryan_receipt_text_size"
+                    android:text="خرید" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_bill_amount"
+                    android:layout_width="0dp"
+                    android:layout_weight=".35"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/yekan"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/aryan_receipt_text_size" />
+
+                <TextView
+                    android:id="@+id/txt_bill_count"
+                    android:layout_width="0dp"
+                    android:layout_weight=".35"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/yekan"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/aryan_receipt_text_size" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight=".30"
+                    android:gravity="right"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/yekan"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/aryan_receipt_text_size"
+                    android:text="پرداخت قبض" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_topup_amount"
+                    android:layout_width="0dp"
+                    android:layout_weight=".35"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/yekan"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/aryan_receipt_text_size" />
+
+                <TextView
+                    android:id="@+id/txt_topup_count"
+                    android:layout_width="0dp"
+                    android:layout_weight=".35"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/yekan"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/aryan_receipt_text_size" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight=".30"
+                    android:gravity="right"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/yekan"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/aryan_receipt_text_size"
+                    android:text="شارژ مستقیم" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_charge_amount"
+                    android:layout_width="0dp"
+                    android:layout_weight=".35"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/yekan"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/aryan_receipt_text_size" />
+
+                <TextView
+                    android:id="@+id/txt_charge_count"
+                    android:layout_width="0dp"
+                    android:layout_weight=".35"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/yekan"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/aryan_receipt_text_size" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight=".30"
+                    android:gravity="right"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/yekan"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/aryan_receipt_text_size"
+                    android:text="شارژ وچر" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_sum"
+            android:layout_marginTop="3px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yekan"
+            android:includeFontPadding="false"
+            android:textColor="@color/black"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/aryan_receipt_text_size"
+            tools:text="Sum" />
+
+
+        <RelativeLayout
+            android:layout_marginTop="3px"
+            android:layout_width="@dimen/aryan_receipt_width"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="3px"
+                android:fontFamily="@font/yekan"
+                android:includeFontPadding="false"
+                android:text="پرداخت نوین"
+                android:textColor="@color/black"
+                android:textSize="@dimen/aryan_receipt_text_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="3px"
+                android:fontFamily="@font/yekan"
+                android:includeFontPadding="false"
+                android:text="021-48006"
+                android:textColor="@color/black"
+                android:textSize="@dimen/aryan_receipt_text_size" />
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:layout_width="@dimen/aryan_receipt_width"
+            android:layout_gravity="center"
+            android:layout_marginTop="20px"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/shaparak_aryan" />
+
+    </LinearLayout>
+
+</layout>

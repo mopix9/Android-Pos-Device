@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_gray">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".buy.view.AmountFragment">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/top_background2">
+
+                <ImageButton
+                    android:id="@+id/back"
+                    android:src="@drawable/chevron_icon"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="18dp"
+                    android:layout_width="56dp"
+                    android:background="@color/transparent"
+                    android:scaleType="centerInside"
+                    android:layout_height="56dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="18dp"
+                    android:gravity="center"
+                    android:textSize="@dimen/titre"
+                    android:fontFamily="@font/iransansbold"
+                    android:textColor="@color/white"
+                    android:layout_alignBaseline="@id/back"
+                    android:layout_toLeftOf="@id/back"
+                    android:text="ترمینال" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="90dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+
+                <FrameLayout
+                    android:visibility="gone"
+                    android:focusableInTouchMode="true"
+                    android:id="@+id/change_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="@drawable/white_background">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="right|center_vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:text="تغییر رمز"
+                            android:fontFamily="@font/iransansbold"
+                            android:textSize="@dimen/titre"
+                            android:textColor="@color/dark"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/path"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <requestFocus/>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/forget_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="@drawable/white_background">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="right|center_vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:text="بازنشانی رمز"
+                            android:fontFamily="@font/iransansbold"
+                            android:textSize="@dimen/titre"
+                            android:textColor="@color/dark"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/path"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <requestFocus/>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/update"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="@drawable/white_background">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="right|center_vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:text="به روز رسانی سیستم"
+                            android:fontFamily="@font/iransansbold"
+                            android:textSize="@dimen/titre"
+                            android:textColor="@color/dark"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/path"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:visibility="gone"
+                    android:id="@+id/tms"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="@drawable/white_background">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="right|center_vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:text="بازنشانی TMS"
+                            android:fontFamily="@font/iransansbold"
+                            android:textSize="@dimen/titre"
+                            android:textColor="@color/dark"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/brightness"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="@drawable/white_background">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="right|center_vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:text="تنظیم روشنایی دستگاه"
+                            android:fontFamily="@font/iransansbold"
+                            android:textSize="@dimen/titre"
+                            android:textColor="@color/dark"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:visibility="gone"
+                    android:id="@+id/connection_type"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_background">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="right|center_vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:text="نوع اتصال"
+                            android:fontFamily="@font/iransansbold"
+                            android:textSize="@dimen/titre"
+                            android:textColor="@color/dark"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <Spinner
+                            android:layoutDirection="ltr"
+                            android:id="@+id/spn_connection_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:spinnerMode="dropdown"
+                            android:textSize="@dimen/title"
+                            android:padding="0dp" />
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@drawable/white_background">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="right|center_vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:text="خرید شناسه دار"
+                            android:fontFamily="@font/iransansbold"
+                            android:textSize="@dimen/titre"
+                            android:textColor="@color/dark"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/iransansbold"
+                            android:textSize="@dimen/title"
+                            android:textColor="@color/blue_gray"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/path"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </ScrollView>
+
+</layout>

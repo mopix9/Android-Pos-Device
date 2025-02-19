@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name" translatable="false">AryanTest</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="company">پرداخت نوین</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="number_merchant" translatable="false">number</string>
+    <string name="nextLevel" translatable="false">مرحله بعدی</string>
+    <string name="save" translatable="false">ذخیره</string>
+    <string name="sandogh" translatable="false">صندوق دار:</string>
+
+</resources>

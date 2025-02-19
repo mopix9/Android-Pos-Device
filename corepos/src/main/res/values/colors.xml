@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#323a43</color>
+    <color name="colorAccent">#ffc20c</color>
+    <color name="orange">#f37421</color>
+    <color name="gray">#b3ffffff</color>
+    <color name="dark_gray">#99ffffff</color>
+    <color name="blue_gray">#7a879a</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="back_gray">#ececf1</color>
+    <color name="green">#01c1a7</color>
+    <color name="purple">#6e7aff</color>
+    <color name="yellow">#ffae41</color>
+    <color name="pink">#ff5d93</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="stroke">#d0d0e2</color>
+    <color name="cansel">#7a879a</color>
+    <color name="light_gray">#EDEDF3</color>
+    <color name="green2">#29c131</color>
+    <color name="text_grey">#585858</color>
+    <color name="text_black">#262424</color>
+    <color name="dark">#28303a</color>
+    <color name="slate">#425065</color>
+    <color name="slate_two">#5c6a7e</color>
+    <color name="blue_grey">#7a879a</color>
+    <color name="pale_purple_two">#9b9bba</color>
+    <color name="pale_purple">#a6a6c0</color>
+    <color name="cloudy_blue">#b4b4ca</color>
+    <color name="light_periwinkle">#d0d0e2</color>
+    <color name="dark_sky_blue">#4a83e9</color>
+    <color name="warm_pink">#fa537e</color>
+    <color name="red">#B71C1C</color>
+    <color name="turquoise">#02bba6</color>
+    <color name="gray2">#A5A5A5</color>
+    <color name="black_gray">#5F5F5F</color>
+    <color name="divide_line">#b2b2b2</color>
+    <color name="content_font_color">#2E2E2E</color>
+
+</resources>

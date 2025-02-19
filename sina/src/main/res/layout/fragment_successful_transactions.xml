@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="viewModel"
+            type="com.fanap.sina.settings.view.seller.report.viewmodel.SuccessfulTransactionsViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layoutDirection="rtl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".buy.view.AmountFragment">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/top_background">
+
+            <ImageButton
+                android:id="@+id/back"
+                android:src="@drawable/chevron_icon"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="18dp"
+                android:layout_width="56dp"
+                android:background="@color/transparent"
+                android:scaleType="centerInside"
+                android:layout_height="56dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_marginTop="18dp"
+                android:gravity="center"
+                android:textSize="@dimen/titre"
+                android:fontFamily="@font/iransansbold"
+                android:textColor="@color/white"
+                android:layout_alignBaseline="@id/back"
+                android:layout_toLeftOf="@id/back"
+                android:text="تراکنش های موفق" />
+
+            <Button
+                android:id="@+id/img_print"
+                android:drawableLeft="@drawable/print"
+                android:layout_alignParentLeft="true"
+                android:padding="5dp"
+                android:text="چاپ رسید"
+                android:textColor="@color/colorAccent"
+                android:fontFamily="@font/iransansbold"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="18dp"
+                android:layout_width="wrap_content"
+                android:background="@color/transparent"
+                android:scaleType="centerInside"
+                android:layout_height="56dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="90dp"
+            android:background="@color/light_gray"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:id="@+id/top"
+                android:layout_alignParentTop="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/btn_start_date"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="50dp"
+                    android:padding="10dp"
+                    android:background="@drawable/white_background">
+
+                    <TextView
+                        android:id="@+id/txt_start_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/mini"
+                        android:fontFamily="@font/iransansbold"
+                        android:textColor="@color/pale_purple_two"
+                        android:layout_centerInParent="true"
+                        android:text="تاریخ شروع"
+                        />
+
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/calendar_1"
+                        android:layout_alignParentLeft="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/btn_end_date"
+                    android:layout_marginRight="5dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="50dp"
+                    android:padding="10dp"
+                    android:background="@drawable/white_background">
+
+                    <TextView
+                        android:id="@+id/txt_end_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/mini"
+                        android:fontFamily="@font/iransansbold"
+                        android:textColor="@color/pale_purple_two"
+                        android:layout_centerInParent="true"
+                        android:text="تاریخ پایان"
+                        />
+
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/calendar_1"
+                        android:layout_alignParentLeft="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tabs"
+                android:layout_below="@id/top"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layoutDirection="ltr">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.25"
+                        android:fontFamily="@font/iransansbold"
+                        android:textSize="@dimen/content"
+                        android:gravity="center"
+                        android:text="شارژ مستقیم"
+                        android:onClick='@{() -> viewModel.setSelectedTransaction("180000")}'
+                        android:textColor='@{viewModel.selectedTransaction.equals("180000")? @color/slate : @color/blue_gray}' />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.25"
+                        android:gravity="center"
+                        android:fontFamily="@font/iransansbold"
+                        android:textSize="@dimen/title"
+                        android:text="شارژ"
+                        android:onClick='@{() -> viewModel.setSelectedTransaction("190000")}'
+                        android:textColor='@{viewModel.selectedTransaction.equals("190000")? @color/slate : @color/blue_gray}' />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.25"
+                        android:gravity="center"
+                        android:fontFamily="@font/iransansbold"
+                        android:textSize="@dimen/title"
+                        android:text="قبض"
+                        android:onClick='@{() -> viewModel.setSelectedTransaction("170000")}'
+                        android:textColor='@{viewModel.selectedTransaction.equals("170000")? @color/slate : @color/blue_gray}' />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.25"
+                        android:gravity="center"
+                        android:fontFamily="@font/iransansbold"
+                        android:textSize="@dimen/title"
+                        android:text="خرید"
+                        android:onClick='@{() -> viewModel.setSelectedTransaction("000000")}'
+                        android:textColor='@{viewModel.selectedTransaction.equals("000000")? @color/slate : @color/blue_gray}' />
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/cloudy_blue"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:layoutDirection="ltr">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="3dp"
+                            android:layout_weight="0.25"
+                            android:background="@color/colorAccent"
+                            android:visibility='@{viewModel.selectedTransaction.equals("180000")? View.VISIBLE : View.INVISIBLE}' />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="3dp"
+                            android:layout_weight="0.25"
+                            android:background="@color/colorAccent"
+                            android:visibility='@{viewModel.selectedTransaction.equals("190000")? View.VISIBLE : View.INVISIBLE}' />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="3dp"
+                            android:layout_weight="0.25"
+                            android:background="@color/colorAccent"
+                            android:visibility='@{viewModel.selectedTransaction.equals("170000")? View.VISIBLE : View.INVISIBLE}' />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="3dp"
+                            android:layout_weight="0.25"
+                            android:background="@color/colorAccent"
+                            android:visibility='@{viewModel.selectedTransaction.equals("000000")? View.VISIBLE : View.INVISIBLE}' />
+
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rec_daily"
+                android:layout_below="@id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:background="@color/light_gray"
+                android:backgroundTint="@color/white"
+                android:orientation="vertical"/>
+
+            <TextView
+                android:text="تاریخ شروع و پایان را انتخاب کنید."
+                android:id="@+id/txt_empty"
+                android:fontFamily="@font/iransansbold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/title" />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</layout>

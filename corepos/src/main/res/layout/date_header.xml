@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/lnr_date_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="@dimen/receipt_width"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yekan"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/receipt_text_size_larg"
+            android:textStyle="bold"
+            tools:text="گزارش تراکنش" />
+
+        <LinearLayout
+            android:layout_width="@dimen/receipt_width"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="@dimen/receipt_width"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:fontFamily="@font/traffic"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/receipt_text_size"
+                    android:text="تاریخ شروع" />
+
+                <TextView
+                    android:id="@+id/txt_start_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:fontFamily="@font/traffic"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/receipt_text_size" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/receipt_width"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="@dimen/receipt_width"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:fontFamily="@font/traffic"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/receipt_text_size"
+                    android:text="تاریخ پایان" />
+
+                <TextView
+                    android:id="@+id/txt_end_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:fontFamily="@font/traffic"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/receipt_text_size"
+                    />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="@dimen/receipt_width"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtTerminalNumberc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/yekan"
+                android:includeFontPadding="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/receipt_text_size"
+                android:text="@string/terminal_number" />
+
+            <TextView
+                android:id="@+id/txtTerminalNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/traffic"
+                android:includeFontPadding="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/receipt_text_size"
+                tools:text="6104X5555" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="@dimen/receipt_width"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/yekan"
+                android:includeFontPadding="false"
+                android:text="@string/shop_id"
+                android:textColor="@color/black"
+                android:textSize="@dimen/receipt_text_size" />
+
+            <TextView
+                android:id="@+id/txt_shop_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/traffic"
+                android:includeFontPadding="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/receipt_text_size"
+                tools:text="4:42" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="@dimen/receipt_width"
+            android:layout_height="@dimen/receipt_line_height"
+            android:layout_marginTop="10px"
+            android:layout_marginBottom="6px"
+            android:background="@color/black" />
+
+    </LinearLayout>
+
+</layout>
+

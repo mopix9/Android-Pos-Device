@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="company">Pasargad Electronic Payment</string>
+    <string name="slogan">Facilitate the payment process between buyers and sellers</string>
+    <string name="version">version</string>
+    <string name="settings">settings</string>
+    <string name="reports">reports</string>
+    <string name="buy">Buy</string>
+    <string name="bills">Bill payments</string>
+    <string name="mobile">Charge</string>
+    <string name="balance2">Balance</string>
+    <string name="shoppingconfiguration">Shopping configuration</string>
+    <string name="bankingconfiguration">Banking configuration</string>
+    <string name="configuration">Configuration</string>
+    <string name="enter_terminal_password">Please enter terminal password</string>
+    <string name="terminal_password_hint">Terminal password</string>
+    <string name="confirm">Confirm</string>
+    <string name="cansel">Cancel</string>
+    <string name="bill_type">Bill type:</string>
+    <string name="amount">Amount:</string>
+    <string name="bill_id">Bill id:</string>
+    <string name="payment_code">Pay id:</string>
+    <string name="date_time">Date time:</string>
+    <string name="charge_amount2">Charge amount:</string>
+    <string name="operator">Operator:</string>
+    <string name="phone_number2">Phone number:</string>
+    <string name="bank">Bank:</string>
+    <string name="seller">Seller</string>
+    <string name="swipe">Please swipe your card</string>
+    <string name="serial_number">Serial number:</string>
+    <string name="buy_qr">Buy with QR</string>
+    <string name="enter_buy_amount">Enter buy amount</string>
+    <string name="kargozar_password_hint">Password</string>
+    <string name="enter_kargozar_password">Please enter password</string>
+
+</resources>

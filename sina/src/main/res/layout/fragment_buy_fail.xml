@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".buy.view.AmountFragment">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/top_background">
+
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="18dp"
+                android:background="@color/transparent"
+                android:scaleType="centerInside"
+                android:src="@drawable/chevron_icon" />
+
+            <TextView
+                android:id="@+id/txt_title"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_alignBaseline="@id/back"
+                android:layout_marginTop="18dp"
+                android:layout_toLeftOf="@id/back"
+                android:fontFamily="@font/iransansbold"
+                android:gravity="center"
+                android:text="لطفا لحظاتی بعد مجددا تلاش کنید"
+                android:textColor="@color/white"
+                android:textSize="@dimen/titre" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="150dp"
+            android:padding="20dp"
+            android:background="@drawable/gray_background">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/bottom"
+                android:background="@drawable/white_background">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:src="@drawable/fail_icon"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/iransansbold"
+                        android:gravity="center_horizontal"
+                        android:text="تراکنش ناموفق"
+                        android:textColor="@color/dark"
+                        android:textSize="@dimen/titre" />
+
+                    <TextView
+                        android:id="@+id/txt_message"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:gravity="center"
+                        android:textSize="@dimen/titre"
+                        android:fontFamily="@font/iransansbold"
+                        android:textColor="@color/blue_gray"
+                        android:text="خطایی رخ داده است!" />
+
+                    <TextView
+                        android:id="@+id/txt_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="@dimen/title"
+                        android:fontFamily="@font/iransansbold"
+                        android:textColor="@color/blue_gray" />
+
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <LinearLayout
+                android:id="@+id/bottom"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/cancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:backgroundTint="@color/cansel"
+                    android:fontFamily="@font/iransansbold"
+                    android:text="بازگشت"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/titre" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+</layout>

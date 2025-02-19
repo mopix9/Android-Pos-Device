@@ -1,0 +1,32 @@
+package com.fanap.corepos.iso.maker.sayan.base
+
+import com.fanap.corepos.iso.maker.aryan.*
+import com.fanap.corepos.iso.maker.base.IMakerFactory
+import com.fanap.corepos.iso.maker.base.Maker
+import com.fanap.corepos.iso.utils.IsoFields
+
+class SayanIsoMakerFactory : IMakerFactory {
+
+    override fun getIsoMaker(msg: HashMap<IsoFields, String>): Maker {
+
+        return when (msg[IsoFields.ProcessCode]!!) {
+            "220000" -> AryanTopupMaker()
+            "170000" -> AryanBillMaker()
+            "180000" -> AryanVoucherMaker()
+            "310000" -> AryanBalanceMaker()
+            "920000" -> AryanLogonMaker()
+            "930000" -> AryanGetTerminalMaker()
+            "000000" -> {
+                when (msg[IsoFields.Mti]!!){
+                    "0200" -> AryanBuyMaker()
+                    "0220" -> AryanAdviseMaker()
+                    "0420" -> AryanReverseMaker()
+                    else -> throw IllegalArgumentException()
+                }
+
+            }
+            else -> throw IllegalArgumentException("Undefined MTI!")
+        }
+    }
+
+}

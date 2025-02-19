@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/lnr_daily_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtReportSuccess"
+            tools:text="تراکنش های موفق"
+            android:layout_width="@dimen/receipt_width"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yekan"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/receipt_text_size_larg"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:text="گزارش روزانه"
+            android:layout_width="@dimen/receipt_width"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yekan"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/receipt_text_size_larg"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="@dimen/receipt_width"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtTerminalNumberc"
+                tools:text="@string/terminal_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/yekan"
+                android:includeFontPadding="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/receipt_text_size" />
+
+            <TextView
+                android:id="@+id/txt_terminal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/traffic"
+                android:includeFontPadding="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/receipt_text_size"
+                tools:text="6104X5555" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="@dimen/receipt_width"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/yekan"
+                android:includeFontPadding="false"
+                android:text="@string/shop_id"
+                android:textColor="@color/black"
+                android:textSize="@dimen/receipt_text_size" />
+
+            <TextView
+                android:id="@+id/txt_merchant_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/traffic"
+                android:includeFontPadding="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/receipt_text_size"
+                tools:text="4:42" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="@dimen/receipt_width"
+            android:layout_height="@dimen/receipt_line_height"
+            android:layout_marginTop="10px"
+            android:layout_marginBottom="6px"
+            android:background="@color/black" />
+
+    </LinearLayout>
+
+</layout>

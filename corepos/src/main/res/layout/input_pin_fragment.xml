@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_gray"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp0"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:gravity="center"
+            android:text="کارمزد 1200 ریال"
+            android:singleLine="true"
+            android:textColor="#f00"
+            android:textSize="@dimen/sp30" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp12"
+            android:singleLine="true"
+            android:fontFamily="@font/iransansbold"
+            android:text="ورود رمز(الزاما توسط مشتری)"
+            android:textColor="#333"
+            android:textSize="@dimen/titre" />
+
+        <TextView
+            android:id="@+id/txt_password"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="@dimen/dp13"
+            android:layout_marginRight="@dimen/dp13"
+            android:layout_marginTop="@dimen/dp12"
+            android:background="@drawable/edittext_background"
+            android:clickable="false"
+            android:gravity="center"
+            android:textColor="#333"
+            android:textSize="@dimen/sp26" />
+    </LinearLayout>
+
+    <com.fanap.corepos.device.hsm.aryan.newland.PinKeyBoard
+        android:id="@+id/n900pinkeyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</LinearLayout>

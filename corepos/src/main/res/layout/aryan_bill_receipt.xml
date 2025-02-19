@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="@dimen/aryan_receipt_width"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/root"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="@dimen/aryan_receipt_width"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="3px"
+                android:fontFamily="@font/yekan"
+                android:includeFontPadding="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/aryan_receipt_text_size"
+                android:textStyle="bold"
+                tools:text="عملیات موفق" />
+
+            <TextView
+                android:id="@+id/txt_amount_or_error"
+                android:layout_width="wrap_content"
+                android:gravity="left"
+                android:layout_marginRight="10px"
+                android:layout_toLeftOf="@id/txt_result"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="3px"
+                android:fontFamily="@font/yekan"
+                android:includeFontPadding="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/aryan_receipt_text_size"
+                android:textStyle="bold"
+                tools:text="1000 ریال" />
+
+        </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="@dimen/aryan_receipt_width"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="3px"
+            android:fontFamily="@font/yekan"
+            android:includeFontPadding="false"
+            android:text="قبض"
+            android:textColor="@color/black"
+            android:textSize="@dimen/aryan_receipt_text_size" />
+
+        <TextView
+            android:id="@+id/txt_bill_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="3px"
+            android:fontFamily="@font/yekan"
+            android:includeFontPadding="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/aryan_receipt_text_size" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="@dimen/aryan_receipt_width"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="3px"
+            android:fontFamily="@font/yekan"
+            android:includeFontPadding="false"
+            android:text="شناسه قبض"
+            android:textColor="@color/black"
+            android:textSize="@dimen/aryan_receipt_text_size" />
+
+        <TextView
+            android:id="@+id/txt_bill_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="3px"
+            android:fontFamily="@font/yekan"
+            android:includeFontPadding="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/aryan_receipt_text_size" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="@dimen/aryan_receipt_width"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="3px"
+            android:fontFamily="@font/yekan"
+            android:includeFontPadding="false"
+            android:text="شناسه پرداخت"
+            android:textColor="@color/black"
+            android:textSize="@dimen/aryan_receipt_text_size" />
+
+        <TextView
+            android:id="@+id/txt_pay_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="3px"
+            android:fontFamily="@font/yekan"
+            android:includeFontPadding="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/aryan_receipt_text_size" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/failMessageLayout"
+        android:layout_width="@dimen/aryan_receipt_width"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="@dimen/receipt_width"
+            android:layout_height="@dimen/receipt_line_height"
+            android:layout_marginTop="6px"
+            android:background="@color/black" />
+
+        <TextView
+            android:id="@+id/txtDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0px"
+            android:fontFamily="@font/yekan"
+            android:includeFontPadding="false"
+            android:text="@string/receipt_unsuccessful_message"
+            android:textColor="@color/black"
+            android:textSize="@dimen/aryan_receipt_text_size" />
+
+        <View
+            android:id="@+id/lineBelowOfFail"
+            android:layout_width="@dimen/receipt_width"
+            android:layout_height="@dimen/receipt_line_height"
+            android:layout_marginTop="6px"
+            android:background="@color/black"
+            android:visibility="visible" />
+    </LinearLayout>
+
+
+    <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/aryan_receipt_width"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/footer_aryan"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/container" />
+
+    </LinearLayout>

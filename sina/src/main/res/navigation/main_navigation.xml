@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/splashFragment">
+
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.fanap.sina.settings.view.SettingsFragment"
+        android:label="SettingsFragment" >
+        <action
+            android:id="@+id/action_settingsFragment_to_sellerFragment"
+            app:destination="@id/sellerFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_configurationFragment"
+            app:destination="@id/configurationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/logonFragment"
+        android:name="com.fanap.sina.settings.view.configuration.LogonFragment"
+        android:label="LogonFragment" >
+        <action
+            app:popUpTo="@id/configurationFragment"
+            app:destination="@id/configurationFragment"
+            app:popUpToInclusive="true"
+            android:id="@+id/action_logonFragment_to_configurationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.fanap.sina.main.fragments.SplashFragment"
+        android:label="SplashFragment" >
+        <action
+            android:id="@+id/action_splashFragment_to_swipeFragment"
+            app:destination="@id/swipeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/buyOptionsFragment"
+        android:name="com.fanap.sina.main.fragments.BuyOptionsFragment"
+        android:label="BuyOptionsFragment" >
+        <action
+            android:id="@+id/action_buyOptionsFragment_to_buyFragment"
+            app:destination="@id/buyFragment" />
+        <action
+            android:id="@+id/action_buyOptionsFragment_to_balanceFragment"
+            app:destination="@id/balanceFragment" />
+        <action
+            android:id="@+id/action_buyOptionsFragment_to_billFragment"
+            app:destination="@id/billFragment" />
+        <action
+            android:id="@+id/action_buyOptionsFragment_to_chargeFragment"
+            app:destination="@id/chargeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/swipeFragment"
+        android:name="com.fanap.sina.main.fragments.SwipeFragment"
+        android:label="SwipeFragment" >
+        <action
+            android:id="@+id/action_swipeFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_swipeFragment_to_buyOptionsFragment"
+            app:destination="@id/buyOptionsFragment" />
+<!--        <action-->
+<!--            android:id="@+id/action_swipeFragment_to_transactionExceptionFragment"-->
+<!--            app:destination="@id/transactionExceptionFragment" />-->
+    </fragment>
+    <fragment
+        android:id="@+id/buyFragment"
+        android:name="com.fanap.sina.buy.BuyFragment"
+        android:label="BuyFragment" >
+        <action
+            app:popUpTo="@id/buyFragment"
+            app:popUpToInclusive="true"
+            android:id="@+id/action_buyFragment_to_swipeFragment"
+            app:destination="@id/swipeFragment" />
+        <action
+            android:id="@+id/action_buyFragment_to_buySuccessFragment"
+            app:destination="@id/buySuccessFragment" />
+        <action
+            android:id="@+id/action_buyFragment_to_buyFailFragment"
+            app:destination="@id/buyFailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/buySuccessFragment"
+        android:name="com.fanap.sina.buy.BuySuccessFragment"
+        android:label="BuySuccessFragment" >
+        <action
+            app:popUpTo="@id/buySuccessFragment"
+            app:popUpToInclusive="true"
+            android:id="@+id/action_buySuccessFragment_to_swipeFragment"
+            app:destination="@id/swipeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/buyFailFragment"
+        android:name="com.fanap.sina.main.fragments.BuyFailFragment"
+        android:label="BuyFailFragment" >
+        <action
+            app:popUpTo="@id/buyFailFragment"
+            app:popUpToInclusive="true"
+            android:id="@+id/action_buyFailFragment_to_swipeFragment"
+            app:destination="@id/swipeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/balanceFragment"
+        android:name="com.fanap.sina.balance.BalanceFragment"
+        android:label="BalanceFragment" >
+        <action
+            android:id="@+id/action_balanceFragment_to_buyFailFragment"
+            app:destination="@id/buyFailFragment" />
+        <action
+            android:id="@+id/action_balanceFragment_to_balanceSuccessFragment"
+            app:destination="@id/balanceSuccessFragment" />
+        <action
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/balanceFragment"
+            android:id="@+id/action_balanceFragment_to_swipeFragment"
+            app:destination="@id/swipeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/balanceSuccessFragment"
+        android:name="com.fanap.sina.balance.BalanceSuccessFragment"
+        android:label="fragment_balance_sucess" >
+        <action
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/balanceSuccessFragment"
+            android:id="@+id/action_balanceSuccessFragment_to_swipeFragment"
+            app:destination="@id/swipeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/billFragment"
+        android:name="com.fanap.sina.bill.BillFragment"
+        android:label="BillFragment" >
+        <action
+            android:id="@+id/action_billFragment_to_billDetailFragment"
+            app:destination="@id/billDetailFragment" />
+        <action
+            android:id="@+id/action_billFragment_to_scannerFragment"
+            app:destination="@id/scannerFragment" />
+        <action
+            app:popUpTo="@id/billFragment"
+            app:popUpToInclusive="true"
+            android:id="@+id/action_billFragment_to_swipeFragment"
+            app:destination="@id/swipeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/billDetailFragment"
+        android:name="com.fanap.sina.bill.BillDetailFragment"
+        android:label="BillDetailFragment" >
+        <action
+            android:id="@+id/action_billDetailFragment_to_billSuccessFragment"
+            app:destination="@id/billSuccessFragment" />
+        <action
+            android:id="@+id/action_billDetailFragment_to_buyFailFragment"
+            app:destination="@id/buyFailFragment" />
+        <action
+            app:popUpTo="@id/billDetailFragment"
+            app:popUpToInclusive="true"
+            android:id="@+id/action_billDetailFragment_to_swipeFragment"
+            app:destination="@id/swipeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/billSuccessFragment"
+        android:name="com.fanap.sina.bill.BillSuccessFragment"
+        android:label="fragment_bill_success">
+        <action
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/billSuccessFragment"
+            android:id="@+id/action_billSuccessFragment_to_swipeFragment"
+            app:destination="@id/swipeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scannerFragment"
+        android:name="com.fanap.sina.main.fragments.ScannerFragment"
+        android:label="fragment_scanner" />
+    <fragment
+        android:id="@+id/chargeFragment"
+        android:name="com.fanap.sina.charge.ChargeFragment"
+        android:label="ChargeFragment" >
+        <action
+            android:id="@+id/action_chargeFragment_to_chargeAmountFragment"
+            app:destination="@id/chargeAmountFragment" />
+        <action
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/chargeFragment"
+            android:id="@+id/action_chargeFragment_to_swipeFragment"
+            app:destination="@id/swipeFragment" />
+        <action
+            android:id="@+id/action_chargeFragment_to_buyFailFragment"
+            app:destination="@id/buyFailFragment" />
+        <action
+            android:id="@+id/action_chargeFragment_to_chargeSuccessFragment"
+            app:destination="@id/chargeSuccessFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/chargeAmountFragment"
+        android:name="com.fanap.sina.charge.ChargeAmountFragment"
+        android:label="ChargeAmountFragment" />
+    <fragment
+        android:id="@+id/chargeSuccessFragment"
+        android:name="com.fanap.sina.charge.ChargeSuccessFragment"
+        android:label="ChargeSuccessFragment" >
+        <action
+            app:popUpTo="@id/chargeSuccessFragment"
+            app:popUpToInclusive="true"
+            android:id="@+id/action_chargeSuccessFragment_to_swipeFragment"
+            app:destination="@id/swipeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sellerFragment"
+        android:name="com.fanap.sina.settings.view.seller.SellerFragment"
+        android:label="SellerFragment" >
+        <action
+            android:id="@+id/action_sellerFragment_to_terminalFragment"
+            app:destination="@id/terminalFragment" />
+        <action
+            android:id="@+id/action_sellerFragment_to_passwordFragment"
+            app:destination="@id/passwordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reportFragment"
+        android:name="com.fanap.sina.settings.view.seller.report.ReportFragment"
+        android:label="ReportFragment" >
+        <action
+            android:id="@+id/action_reportFragment_to_fundFragment"
+            app:destination="@id/fundFragment" />
+        <action
+            android:id="@+id/action_reportFragment_to_dailyReportFragment"
+            app:destination="@id/dailyReportFragment" />
+        <action
+            android:id="@+id/action_reportFragment_to_reportByDateFragment"
+            app:destination="@id/reportByDateFragment" />
+        <action
+            android:id="@+id/action_reportFragment_to_successfulTransactionsFragment"
+            app:destination="@id/successfulTransactionsFragment" />
+        <action
+            android:id="@+id/action_reportFragment_to_singleReportFragment"
+            app:destination="@id/singleReportFragment" />
+        <action
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/sellerFragment"
+            android:id="@+id/action_reportFragment_to_sellerFragment"
+            app:destination="@id/sellerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fundFragment"
+        android:name="com.fanap.sina.settings.view.seller.report.FundFragment"
+        android:label="FundFragment" />
+    <fragment
+        android:id="@+id/dailyReportFragment"
+        android:name="com.fanap.sina.settings.view.seller.report.DailyReportFragment"
+        android:label="DailyReportFragment" />
+    <fragment
+        android:id="@+id/reportByDateFragment"
+        android:name="com.fanap.sina.settings.view.seller.report.ReportByDateFragment"
+        android:label="ReportByDateFragment" />
+    <fragment
+        android:id="@+id/successfulTransactionsFragment"
+        android:name="com.fanap.sina.settings.view.seller.report.SuccessfulTransactionsFragment"
+        android:label="SuccessfulTransactionsFragment" />
+    <fragment
+        android:id="@+id/singleReportFragment"
+        android:name="com.fanap.sina.settings.view.seller.report.SingleReportFragment"
+        android:label="SingleReportFragment" />
+    <fragment
+        android:id="@+id/configurationFragment"
+        android:name="com.fanap.sina.settings.view.configuration.ConfigurationFragment"
+        android:label="ConfigurationFragment" >
+        <action
+            android:id="@+id/action_configurationFragment_to_passwordFragment"
+            app:destination="@id/passwordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/passwordFragment"
+        android:name="com.fanap.sina.settings.view.PasswordFragment"
+        android:label="PasswordFragment" >
+        <action
+            android:id="@+id/action_passwordFragment_to_updateConfigurationFragment"
+            app:destination="@id/updateConfigurationFragment" />
+        <action
+            android:id="@+id/action_passwordFragment_to_logonFragment"
+            app:destination="@id/logonFragment" />
+        <action
+            android:id="@+id/action_passwordFragment_to_reportFragment"
+            app:destination="@id/reportFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateConfigurationFragment"
+        android:name="com.fanap.sina.settings.view.UpdateConfigurationFragment"
+        android:label="UpdateConfigurationFragment" >
+        <action
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/configurationFragment"
+            android:id="@+id/action_updateConfigurationFragment_to_configurationFragment"
+            app:destination="@id/configurationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/terminalFragment"
+        android:name="com.fanap.sina.settings.view.seller.terminal.TerminalFragment"
+        android:label="TerminalFragment" >
+        <action
+            android:id="@+id/action_terminalFragment_to_brightnessFragment"
+            app:destination="@id/brightnessFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/brightnessFragment"
+        android:name="com.fanap.sina.settings.view.seller.terminal.BrightnessFragment"
+        android:label="BrightnessFragment" />
+</navigation>

@@ -1,0 +1,86 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.fanap.androidpos.setting.view.seller.BrightnessFragment"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/top_background2">
+
+            <ImageButton
+                android:id="@+id/back"
+                android:src="@drawable/chevron_icon"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="18dp"
+                android:layout_width="56dp"
+                android:background="@color/transparent"
+                android:scaleType="centerInside"
+                android:layout_height="56dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_alignBaseline="@id/back"
+                android:layout_marginTop="18dp"
+                android:layout_toLeftOf="@id/back"
+                android:fontFamily="@font/iransansbold"
+                android:gravity="center"
+                android:text="تنظیم نور"
+                android:textColor="@color/white"
+                android:textSize="@dimen/titre" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:padding="15dp"
+            android:background="@color/white"
+            android:layout_marginTop="90dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <SeekBar
+                android:id="@+id/seek"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:focusableInTouchMode="true"
+                android:layout_below="@id/seek"
+                android:id="@+id/update"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/iransansbold"
+                android:textSize="@dimen/title"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/green"
+                android:text="ثبت و به روز رسانی"
+                android:drawableLeft="@drawable/flash_icon"
+                android:paddingLeft="20dp" >
+                <requestFocus/>
+            </Button>
+
+        </RelativeLayout>
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/loading"
+            android:layout_gravity="center"
+            style="@style/AVLoadingIndicatorView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:indicatorColor="@color/colorAccent"
+            app:indicatorName="BallPulseIndicator" />
+
+    </FrameLayout>
+</layout>

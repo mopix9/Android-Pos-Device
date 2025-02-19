@@ -1,0 +1,2 @@
+com/fanap/test/BuildConfig.java
+ com.fanap.test.BuildConfig

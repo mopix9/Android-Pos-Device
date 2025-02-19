@@ -1,0 +1,36 @@
+package com.masa.aryan.settings.buyer
+
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import com.masa.aryan.R
+import com.masa.aryan.base.BaseFragment
+import com.masa.aryan.databinding.FragmentBuyerBinding
+
+
+class BuyerFragment : BaseFragment<FragmentBuyerBinding>() {
+
+    override fun getViewBinding(
+        inflater: LayoutInflater,
+        container: ViewGroup?
+    ) = FragmentBuyerBinding.inflate(inflater,container,false)
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.settlement.setOnClickListener {
+            navigate(this,R.id.action_buyerFragment_to_settlementFragment)
+        }
+
+        binding.back.setOnClickListener {
+            finish(this)
+        }
+
+        onBackPressed.observe(viewLifecycleOwner,{
+            finish(this)
+        })
+    }
+
+
+}

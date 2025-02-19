@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.fanap.sina.base.BaseViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layoutDirection="rtl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".buy.view.AmountFragment">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/top_background">
+
+            <ImageButton
+                android:id="@+id/back"
+                android:src="@drawable/chevron_icon"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="18dp"
+                android:layout_width="56dp"
+                android:background="@color/transparent"
+                android:scaleType="centerInside"
+                android:layout_height="56dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_marginTop="18dp"
+                android:gravity="center"
+                android:textSize="@dimen/titre"
+                android:fontFamily="@font/iransansbold"
+                android:textColor="@color/white"
+                android:layout_alignBaseline="@id/back"
+                android:layout_toLeftOf="@id/back"
+                android:text="گزارش روزانه" />
+
+            <Button
+                android:id="@+id/print"
+                android:drawableLeft="@drawable/print"
+                android:layout_alignParentLeft="true"
+                android:padding="5dp"
+                android:text="چاپ رسید"
+                android:textColor="@color/colorAccent"
+                android:fontFamily="@font/iransansbold"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="18dp"
+                android:layout_width="wrap_content"
+                android:background="@color/transparent"
+                android:scaleType="centerInside"
+                android:layout_height="56dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="90dp"
+            android:background="@color/light_gray"
+            android:padding="20dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rec_daily"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:background="@color/light_gray"
+                android:orientation="vertical"/>
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:text="تراکنشی موجود نیست!"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:textSize="@dimen/title"
+            android:id="@+id/txt_empty"
+            android:fontFamily="@font/iransansbold"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </FrameLayout>
+
+</layout>

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/receipt_width"
+        android:orientation="horizontal"
+        android:gravity="right|center_vertical">
+
+
+        <ImageView
+            android:layout_marginRight="25px"
+            android:id="@+id/imageView2"
+            android:layout_width="240px"
+            android:layout_height="1080px"
+            android:src="@drawable/shaparak_psp_vertical" />
+
+
+        <include
+            android:id="@+id/table"
+            layout="@layout/found_table" />
+
+        <LinearLayout
+            android:layout_marginLeft="15px"
+            android:layout_marginRight="-90px"
+            android:layout_width="@dimen/receipt_small_width"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txt_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="12:30"
+                    android:fontFamily="@font/yekan"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/receipt_text_size_tiny" />
+
+                <TextView
+                    android:id="@+id/txt_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="00/08/30"
+                    android:fontFamily="@font/yekan"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/receipt_text_size_small" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:text="گزارش صندوق"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:textSize="@dimen/receipt_text_size_small"
+                android:fontFamily="@font/yekan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txt_start_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/yekan"
+                    android:textSize="@dimen/receipt_text_size_tiny"
+                    tools:text="12:30" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/yekan"
+                    android:textSize="@dimen/receipt_text_size_small"
+                    android:text="تاریخ شروع:" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txt_start_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/yekan"
+                    android:textSize="@dimen/receipt_text_size_tiny"
+                    tools:text="12:30" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:fontFamily="@font/yekan"
+                    android:text="ساعت شروع:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/receipt_text_size_small" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txt_end_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:fontFamily="@font/yekan"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/receipt_text_size_tiny"
+                    tools:text="12:30" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:fontFamily="@font/yekan"
+                    android:text="تاریخ پایان:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/receipt_text_size_small" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txt_end_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:fontFamily="@font/yekan"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/receipt_text_size_tiny"
+                    tools:text="12:30" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/yekan"
+                    android:textSize="@dimen/receipt_text_size_small"
+                    android:text="ساعت پایان:" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txt_terminal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/yekan"
+                    android:textSize="@dimen/receipt_text_size_tiny"
+                    tools:text="12:30" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/yekan"
+                    android:textSize="@dimen/receipt_text_size_small"
+                    android:text="شماره پایانه:" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txt_merchant"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:fontFamily="@font/yekan"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/receipt_text_size_tiny"
+                    tools:text="12:30" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/yekan"
+                    android:textSize="@dimen/receipt_text_size_small"
+                    android:text="شناسه فروشگاه:" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_merchant_phone"
+            android:rotation="90"
+            android:text="123456789"
+            android:textSize="@dimen/receipt_text_size"
+            android:textColor="@color/black"
+            android:fontFamily="@font/yekan"
+            android:layout_marginRight="-190px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/txt_merchant_name"
+            android:rotation="90"
+            android:textColor="@color/black"
+            android:text="sssssssss"
+            android:fontFamily="@font/yekan"
+            android:textSize="@dimen/receipt_text_size"
+            android:layout_marginRight="-100px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</layout>

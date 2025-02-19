@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.fanap.sina.settings.view.configuration.viewmodel.LogonViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_above="@id/keyboard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layoutDirection="rtl"
+                tools:context=".buy.view.AmountFragment">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/top_background">
+
+                    <ImageButton
+                        android:id="@+id/back"
+                        android:src="@drawable/chevron_icon"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="18dp"
+                        android:layout_width="56dp"
+                        android:background="@color/transparent"
+                        android:scaleType="centerInside"
+                        android:layout_height="56dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="56dp"
+                        android:layout_marginTop="18dp"
+                        android:gravity="center"
+                        android:textSize="@dimen/titre"
+                        android:fontFamily="@font/iransansbold"
+                        android:textColor="@color/white"
+                        android:layout_alignBaseline="@id/back"
+                        android:layout_toLeftOf="@id/back"
+                        android:text="پیکربندی کلی" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="90dp"
+                    android:background="@color/light_gray"
+                    android:padding="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:visibility="gone"
+                        android:layout_marginTop="30dp"
+                        android:text="شماره سریال"
+                        android:gravity="right"
+                        android:textColor="@color/blue_gray"
+                        android:textSize="@dimen/titre"
+                        android:fontFamily="@font/iransansbold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <FrameLayout
+                        android:visibility="gone"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edittext_background"
+                        android:layout_width="match_parent"
+                        android:layout_height="53dp"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp">
+
+                        <EditText
+                            android:textDirection="ltr"
+                            android:id="@+id/edt_serial_no"
+                            android:text="@={viewModel.serialNo}"
+                            android:fontFamily="@font/iransansbold"
+                            android:gravity="center"
+                            android:textSize="@dimen/title"
+                            android:inputType="number"
+                            android:textColor="@color/dark"
+                            android:background="@color/transparent"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="سریال پایانه را وارد کنید" />
+
+                    </FrameLayout>
+
+
+
+                    <TextView
+                        android:layout_marginTop="30dp"
+                        android:text="شماره پایانه"
+                        android:gravity="right"
+                        android:textColor="@color/blue_gray"
+                        android:textSize="@dimen/titre"
+                        android:fontFamily="@font/iransansbold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <FrameLayout
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edittext_background"
+                        android:layout_width="match_parent"
+                        android:layout_height="53dp"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp">
+
+                        <EditText
+                            android:textDirection="ltr"
+                            android:id="@+id/edt_terminal_no"
+                            android:text="@={viewModel.terminalNo}"
+                            android:fontFamily="@font/iransansbold"
+                            android:gravity="center"
+                            android:textSize="@dimen/title"
+                            android:inputType="number"
+                            android:maxLength="30"
+                            android:textIsSelectable="true"
+                            android:textColor="@color/dark"
+                            android:background="@color/transparent"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="شماره پایانه را وارد کنید" />
+
+                    </FrameLayout>
+
+
+                    <TextView
+                        android:layout_marginTop="30dp"
+                        android:text="شناسه فروشگاه"
+                        android:gravity="right"
+                        android:textColor="@color/blue_gray"
+                        android:textSize="@dimen/titre"
+                        android:fontFamily="@font/iransansbold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <FrameLayout
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edittext_background"
+                        android:layout_width="match_parent"
+                        android:layout_height="53dp"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp">
+
+                        <EditText
+                            android:textDirection="ltr"
+                            android:id="@+id/edt_merchant_no"
+                            android:text="@={viewModel.merchantNo}"
+                            android:fontFamily="@font/iransansbold"
+                            android:gravity="center"
+                            android:textSize="@dimen/title"
+                            android:maxLength="30"
+                            android:textIsSelectable="true"
+                            android:inputType="number"
+                            android:textColor="@color/dark"
+                            android:background="@color/transparent"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="شناسه فروشگاه را وارد کنید" />
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_marginTop="30dp"
+                        android:text="آدرس شبکه سرور"
+                        android:gravity="right"
+                        android:textColor="@color/blue_gray"
+                        android:textSize="@dimen/titre"
+                        android:fontFamily="@font/iransansbold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <FrameLayout
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edittext_background"
+                        android:layout_width="match_parent"
+                        android:layout_height="53dp"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp">
+
+                        <EditText
+                            android:textDirection="ltr"
+                            android:id="@+id/edt_ip"
+                            android:text="@={viewModel.ip}"
+                            android:fontFamily="@font/iransansbold"
+                            android:gravity="center"
+                            android:textSize="@dimen/title"
+                            android:textColor="@color/dark"
+                            android:maxLength="15"
+                            android:textIsSelectable="true"
+                            android:inputType="text"
+                            android:singleLine="true"
+                            android:background="@color/transparent"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="آدرس شبکه سرور را وارد کنید" />
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_marginTop="30dp"
+                        android:text="شماره درگاه سرور"
+                        android:gravity="right"
+                        android:textColor="@color/blue_gray"
+                        android:textSize="@dimen/titre"
+                        android:fontFamily="@font/iransansbold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <FrameLayout
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edittext_background"
+                        android:layout_width="match_parent"
+                        android:layout_height="53dp"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp">
+
+                        <EditText
+                            android:textDirection="ltr"
+                            android:id="@+id/edt_port"
+                            android:text="@={viewModel.port}"
+                            android:fontFamily="@font/iransansbold"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:textSize="@dimen/title"
+                            android:maxLength="5"
+                            android:textIsSelectable="true"
+                            android:textColor="@color/dark"
+                            android:background="@color/transparent"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="شماره درگاه سرور را وارد کنید" />
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_marginTop="30dp"
+                        android:text="آدرس شبکه سرور TMS"
+                        android:gravity="right"
+                        android:textColor="@color/blue_gray"
+                        android:textSize="@dimen/titre"
+                        android:fontFamily="@font/iransansbold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:background="@drawable/edittext_background"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.65"
+                            android:layout_height="53dp"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp">
+
+                            <EditText
+                                android:textDirection="ltr"
+                                android:fontFamily="@font/iransansbold"
+                                android:gravity="center"
+                                android:text="@={viewModel.tms}"
+                                android:id="@+id/edt_tms"
+                                android:textSize="@dimen/title"
+                                android:maxLength="15"
+                                android:textColor="@color/dark"
+                                android:textIsSelectable="true"
+                                android:background="@color/transparent"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:inputType="text"
+                                android:singleLine="true"
+                                android:hint="آدرس شبکه سرور تی ام اس" />
+
+                        </FrameLayout>
+
+                        <Spinner
+                            android:id="@+id/spn_protocol"
+                            android:layout_width="0dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginLeft="2dp"
+                            android:layout_weight="0.35"
+                            android:spinnerMode="dropdown"
+                            android:layoutDirection="ltr"
+                            android:selectedItemPosition="@={viewModel.protocol}"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_marginTop="30dp"
+                        android:text="شماره درگاه سرور TMS"
+                        android:gravity="right"
+                        android:textColor="@color/blue_gray"
+                        android:textSize="@dimen/titre"
+                        android:fontFamily="@font/iransansbold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <FrameLayout
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edittext_background"
+                        android:layout_width="match_parent"
+                        android:layout_height="53dp"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp">
+
+                        <EditText
+                            android:textDirection="ltr"
+                            android:fontFamily="@font/iransansbold"
+                            android:gravity="center"
+                            android:text="@={viewModel.tmsPort}"
+                            android:id="@+id/edt_tms_port"
+                            android:textSize="@dimen/title"
+                            android:maxLength="5"
+                            android:textColor="@color/dark"
+                            android:background="@color/transparent"
+                            android:layout_width="match_parent"
+                            android:textIsSelectable="true"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:singleLine="true"
+                            android:hint="شماره درگاه سرور تی ام اس" />
+
+                    </FrameLayout>
+
+                    <Button
+                        android:id="@+id/btn_logon"
+                        android:layout_marginTop="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:onClick="@{() -> viewModel.setOnConfirmClicked()}"
+                        android:fontFamily="@font/iransansbold"
+                        android:textSize="@dimen/title"
+                        android:textColor="@color/white"
+                        android:backgroundTint="@color/green"
+                        android:text="ثبت و به روز رسانی" >
+                        <requestFocus/>
+                    </Button>
+
+                </LinearLayout>
+            </FrameLayout>
+
+        </ScrollView>
+
+        <com.fanap.corepos.utils.CustomKeyboard
+            android:visibility="gone"
+            android:id="@+id/keyboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="viewModel"
+            type="com.fanap.sina.settings.view.seller.report.viewmodel.SingleReportViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layoutDirection="rtl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".buy.view.AmountFragment">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/top_background">
+
+            <ImageButton
+                android:id="@+id/back"
+                android:src="@drawable/chevron_icon"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="18dp"
+                android:layout_width="56dp"
+                android:background="@color/transparent"
+                android:scaleType="centerInside"
+                android:layout_height="56dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_marginTop="18dp"
+                android:gravity="center"
+                android:textSize="@dimen/titre"
+                android:fontFamily="@font/iransansbold"
+                android:textColor="@color/white"
+                android:layout_alignBaseline="@id/back"
+                android:layout_toLeftOf="@id/back"
+                android:text="گزارش تراکنش" />
+
+            <Button
+                android:id="@+id/img_print"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="18dp"
+                android:background="@color/transparent"
+                android:drawableLeft="@drawable/print"
+                android:fontFamily="@font/iransansbold"
+                android:padding="5dp"
+                android:scaleType="centerInside"
+                android:text="چاپ رسید"
+                android:textColor="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/line"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/back"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"/>
+
+            <FrameLayout
+                android:layout_below="@id/line"
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+
+                <LinearLayout
+                    android:visibility="@{viewModel.isSearchOpen? View.VISIBLE : View.GONE}"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+                    <ImageButton
+                        android:onClick="@{() -> viewModel.setIsSearchOpen()}"
+                        android:layout_gravity="center"
+                        android:src="@drawable/clear"
+                        android:background="@color/transparent"
+                        android:layout_width="50dp"
+                        android:scaleType="centerInside"
+                        android:layout_height="match_parent"/>
+
+                    <EditText
+                        android:singleLine="true"
+                        android:textDirection="ltr"
+                        android:id="@+id/edt_search"
+                        android:textSize="@dimen/content"
+                        android:textColor="@color/gray"
+                        android:textColorHint="@color/gray"
+                        android:hint="شماره‌ی پیگیری تراکنش را وارد کنید"
+                        android:layout_weight="0.8"
+                        android:gravity="center"
+                        android:textIsSelectable="true"
+                        android:inputType="number"
+                        android:background="@color/transparent"
+                        android:fontFamily="@font/iransansbold"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent" >
+                    </EditText>
+
+
+                    <ImageButton
+                        android:id="@+id/img_search"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_search"
+                        android:background="@color/transparent"
+                        android:layout_width="50dp"
+                        android:scaleType="centerInside"
+                        android:layout_height="match_parent"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="@{viewModel.isSearchOpen? View.GONE : View.VISIBLE}"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txt_search"
+                        android:textColor="@color/gray"
+                        android:gravity="center"
+                        android:fontFamily="@font/iransansbold"
+                        android:text="انتخاب تراکنش"
+                        android:textSize="@dimen/title"
+                        android:layout_weight="0.5"
+                        android:onClick="@{() -> viewModel.setIsSearchOpen()}"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"/>
+
+                    <TextView
+                        android:background="@color/gray"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"/>
+
+                    <TextView
+                        android:id="@+id/btn_last_transaction"
+                        android:textColor="@color/gray"
+                        android:gravity="center"
+                        android:fontFamily="@font/iransansbold"
+                        android:text="آخرین تراکنش"
+                        android:textSize="@dimen/title"
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"/>
+
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="157dp"
+            android:background="@color/light_gray"
+            android:padding="20dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/card"
+                    android:background="@drawable/white_left_radius_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layoutDirection="rtl"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:background="@color/colorAccent"
+                        android:layout_width="4dp"
+                        android:layout_height="match_parent"/>
+
+                    <LinearLayout
+                        android:padding="20dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="right">
+
+                        <TextView
+                            android:id="@+id/txt_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/titre"
+                            android:fontFamily="@font/iransansbold"
+                            android:textColor="@color/dark"
+                            android:text="خرید" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/dash"/>
+
+
+                        <LinearLayout
+                            android:layout_marginTop="20dp"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/txt_bank"
+                                android:fontFamily="@font/iransansbold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/title"
+                                android:textColor="@color/blue_grey"
+                                android:gravity="end"
+                                android:text="تعداد موفق :"
+                                />
+
+                            <TextView
+                                android:id="@+id/txt_card"
+                                android:layout_marginRight="15dp"
+                                android:fontFamily="@font/iransansbold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/title"
+                                android:textColor="@color/slate"
+                                android:text="0" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_marginTop="20dp"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:fontFamily="@font/iransansbold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/title"
+                                android:id="@+id/txt_date"
+                                android:textColor="@color/blue_grey"
+                                android:gravity="end"
+                                android:text="تعداد ناموفق :"
+                                />
+
+                            <TextView
+                                android:layout_marginRight="15dp"
+                                android:fontFamily="@font/iransansbold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/title"
+                                android:id="@+id/txt_time"
+                                android:textColor="@color/slate"
+                                android:text="۱۲" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_marginTop="20dp"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:fontFamily="@font/iransansbold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/title"
+                                android:textColor="@color/blue_grey"
+                                android:gravity="end"
+                                android:id="@+id/txt_rrn"
+                                android:text="پیگیری/مرجع"
+                                />
+
+                            <TextView
+                                android:layout_marginRight="15dp"
+                                android:fontFamily="@font/iransansbold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/title"
+                                android:id="@+id/txt_rrn_value"
+                                android:textColor="@color/slate"
+                                android:text="۱۲" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_marginTop="20dp"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:fontFamily="@font/iransansbold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/title"
+                                android:textColor="@color/blue_grey"
+                                android:gravity="end"
+                                android:text="وضعیت "
+                                />
+
+                            <TextView
+                                android:layout_marginRight="15dp"
+                                android:fontFamily="@font/iransansbold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/title"
+                                android:textColor="@color/turquoise"
+                                android:id="@+id/txt_response"
+                                android:text="موفق" />
+
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:id="@+id/row1"
+                            android:layout_marginTop="20dp"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/txt_row1"
+                                android:fontFamily="@font/iransansbold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/title"
+                                android:textColor="@color/blue_grey"
+                                android:gravity="end"
+                                android:text="پیگیری/مرجع"
+                                />
+
+                            <TextView
+                                android:id="@+id/txt_row1_value"
+                                android:layout_marginRight="15dp"
+                                android:fontFamily="@font/iransansbold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/title"
+                                android:textColor="@color/slate"
+                                android:text="۱۲" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:id="@+id/row2"
+                            android:layout_marginTop="20dp"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/txt_row2"
+                                android:fontFamily="@font/iransansbold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/title"
+                                android:textColor="@color/blue_grey"
+                                android:gravity="end"
+                                android:text="پیگیری/مرجع"
+                                />
+
+                            <TextView
+                                android:id="@+id/txt_row2_value"
+                                android:layout_marginRight="15dp"
+                                android:fontFamily="@font/iransansbold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/title"
+                                android:textColor="@color/slate"
+                                android:text="۱۲" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:id="@+id/row3"
+                            android:layout_marginTop="20dp"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/txt_row3"
+                                android:fontFamily="@font/iransansbold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/title"
+                                android:textColor="@color/blue_grey"
+                                android:gravity="end"
+                                android:text="پیگیری/مرجع"
+                                />
+
+                            <TextView
+                                android:id="@+id/txt_row3_value"
+                                android:layout_marginRight="15dp"
+                                android:fontFamily="@font/iransansbold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/title"
+                                android:textColor="@color/slate"
+                                android:text="۱۲" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:id="@+id/row4"
+                            android:layout_marginTop="20dp"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/txt_row4"
+                                android:fontFamily="@font/iransansbold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/title"
+                                android:textColor="@color/blue_grey"
+                                android:gravity="end"
+                                android:text="پیگیری/مرجع"
+                                />
+
+                            <TextView
+                                android:id="@+id/txt_row4_value"
+                                android:layout_marginRight="15dp"
+                                android:fontFamily="@font/iransansbold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/title"
+                                android:textColor="@color/slate"
+                                android:text="۱۲" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <TextView
+                android:id="@+id/txt_empty"
+                android:textColor="@color/slate"
+                android:gravity="center"
+                android:fontFamily="@font/iransansbold"
+                android:text="لطفا یکی از گزینه های بالا را انتخاب نمایید"
+                android:textSize="@dimen/title"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+            <com.fanap.corepos.utils.CustomKeyboard
+                android:visibility="gone"
+                android:id="@+id/keyboard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true" />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</layout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/lnr"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_title_up"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/medium_titre"
+                android:paddingLeft="17dp"
+                android:paddingRight="17dp"
+                android:gravity="center"
+                android:paddingTop="21dp"
+                android:textColor="@color/slate"
+                android:text="به روز رسانی"
+                android:fontFamily="@font/iransansbold" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/slate"/>
+
+            <TextView
+                android:text="0 %"
+                android:id="@+id/percent"
+                android:background="@drawable/green_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:paddingBottom="16dp"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textColor="@color/white" />
+
+            <ProgressBar
+                android:visibility="gone"
+                android:id="@+id/progress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="14dp"
+                android:max="100"
+                android:rotation="180" />
+
+            <LinearLayout
+                android:visibility="gone"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <Button
+                    android:visibility="gone"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:id="@+id/btn_cancel_up"
+                    android:layout_width="0dp"
+                    android:layout_weight=".5"
+                    android:layout_height="39dp"
+                    android:fontFamily="@font/iransansbold"
+                    android:background="@drawable/cansel_background"
+                    android:text="بستن"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:visibility="gone"
+                    android:focusableInTouchMode="true"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_width="0dp"
+                    android:layout_weight=".5"
+                    android:id="@+id/btn_download_up"
+                    android:layout_height="39dp"
+                    android:background="@drawable/green_background"
+                    android:text="دریافت برنامه"
+                    android:fontFamily="@font/iransansbold"
+                    android:textColor="@color/white" >
+                    <requestFocus/>
+                </Button>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+</layout>

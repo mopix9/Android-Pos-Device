@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".settings.fingerprint.FingerPrintActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_margin="20dp"
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="400px"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/bio" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="40dp"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnScanAndExtract"
+                android:backgroundTint="@color/green"
+                android:fontFamily="@font/iransansbold"
+                android:textSize="@dimen/title"
+                android:textColor="@color/white"
+                android:text="Scan"
+                android:layout_marginEnd="60dp"
+                android:layout_marginStart="20dp"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent" />
+            <Button
+                android:id="@+id/btnDisEnabledHost"
+                android:text="Disable"
+                android:backgroundTint="@color/red"
+                android:fontFamily="@font/iransansbold"
+                android:textSize="@dimen/title"
+                android:textColor="@color/white"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvLog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

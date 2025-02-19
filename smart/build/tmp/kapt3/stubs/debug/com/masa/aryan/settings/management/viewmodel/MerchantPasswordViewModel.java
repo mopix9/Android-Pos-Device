@@ -1,0 +1,46 @@
+package com.masa.aryan.settings.management.viewmodel;
+
+import java.lang.System;
+
+@kotlin.Metadata(mv = {1, 7, 1}, k = 1, d1 = {"\u00006\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0010\u0002\n\u0002\b\u0002\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\u0004J\u0006\u0010\u0014\u001a\u00020\u0015J\b\u0010\u0016\u001a\u00020\u0015H\u0002R\u0017\u0010\u0005\u001a\b\u0012\u0004\u0012\u00020\u00070\u0006\u00a2\u0006\b\n\u0000\u001a\u0004\b\b\u0010\tR\u0017\u0010\n\u001a\b\u0012\u0004\u0012\u00020\u000b0\u0006\u00a2\u0006\b\n\u0000\u001a\u0004\b\f\u0010\tR\u001f\u0010\r\u001a\u0010\u0012\f\u0012\n \u000f*\u0004\u0018\u00010\u00070\u00070\u000e\u00a2\u0006\b\n\u0000\u001a\u0004\b\u0010\u0010\u0011R\u001f\u0010\u0012\u001a\u0010\u0012\f\u0012\n \u000f*\u0004\u0018\u00010\u00070\u00070\u000e\u00a2\u0006\b\n\u0000\u001a\u0004\b\u0013\u0010\u0011\u00a8\u0006\u0017"}, d2 = {"Lcom/masa/aryan/settings/management/viewmodel/MerchantPasswordViewModel;", "Lcom/masa/aryan/base/BaseViewModel;", "application", "Landroid/app/Application;", "(Landroid/app/Application;)V", "onError", "Landroidx/lifecycle/MutableLiveData;", "", "getOnError", "()Landroidx/lifecycle/MutableLiveData;", "onSuccess", "", "getOnSuccess", "password", "Landroidx/databinding/ObservableField;", "kotlin.jvm.PlatformType", "getPassword", "()Landroidx/databinding/ObservableField;", "repeatPassword", "getRepeatPassword", "setOnConfirmClicked", "", "update", "aryan_debug"})
+public final class MerchantPasswordViewModel extends com.masa.aryan.base.BaseViewModel {
+    @org.jetbrains.annotations.NotNull()
+    private final androidx.databinding.ObservableField<java.lang.String> password = null;
+    @org.jetbrains.annotations.NotNull()
+    private final androidx.databinding.ObservableField<java.lang.String> repeatPassword = null;
+    @org.jetbrains.annotations.NotNull()
+    private final androidx.lifecycle.MutableLiveData<java.lang.String> onError = null;
+    @org.jetbrains.annotations.NotNull()
+    private final androidx.lifecycle.MutableLiveData<java.lang.Boolean> onSuccess = null;
+    
+    public MerchantPasswordViewModel(@org.jetbrains.annotations.NotNull()
+    android.app.Application application) {
+        super(null);
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final androidx.databinding.ObservableField<java.lang.String> getPassword() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final androidx.databinding.ObservableField<java.lang.String> getRepeatPassword() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final androidx.lifecycle.MutableLiveData<java.lang.String> getOnError() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final androidx.lifecycle.MutableLiveData<java.lang.Boolean> getOnSuccess() {
+        return null;
+    }
+    
+    public final void setOnConfirmClicked() {
+    }
+    
+    private final void update() {
+    }
+}

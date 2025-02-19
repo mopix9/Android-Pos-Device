@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_gray">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".buy.view.AmountFragment">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/top_background2">
+
+                <ImageButton
+                    android:id="@+id/back"
+                    android:src="@drawable/chevron_icon"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="18dp"
+                    android:layout_width="56dp"
+                    android:background="@color/transparent"
+                    android:scaleType="centerInside"
+                    android:layout_height="56dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="18dp"
+                    android:gravity="center"
+                    android:textSize="@dimen/titre"
+                    android:fontFamily="@font/iransansbold"
+                    android:textColor="@color/white"
+                    android:layout_alignBaseline="@id/back"
+                    android:layout_toLeftOf="@id/back"
+                    android:text="فروشنده" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="90dp"
+
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <FrameLayout
+                    android:focusableInTouchMode="true"
+                    android:id="@+id/reports"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@drawable/white_background">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="right|center_vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:text="گزارشات"
+                            android:fontFamily="@font/iransansbold"
+                            android:textSize="@dimen/titre"
+                            android:textColor="@color/dark"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:text="گزارش مجموع صندوق، گزارش روزانه و ..."
+                            android:fontFamily="@font/iransansbold"
+                            android:textSize="@dimen/title"
+                            android:textColor="@color/blue_gray"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/path"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <requestFocus/>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/terminal"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@drawable/white_background">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="right|center_vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:text="ترمینال"
+                            android:fontFamily="@font/iransansbold"
+                            android:textSize="@dimen/titre"
+                            android:textColor="@color/dark"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:text="تغییر رمز ترمینال،به روز رسانی و ..."
+                            android:fontFamily="@font/iransansbold"
+                            android:textSize="@dimen/title"
+                            android:textColor="@color/blue_gray"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/path"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:visibility="gone"
+                    android:id="@+id/check_last_transactin"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@drawable/white_background">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="right|center_vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:text="تسویه با مرکز"
+                            android:fontFamily="@font/iransansbold"
+                            android:textSize="@dimen/titre"
+                            android:textColor="@color/dark"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:text="تسویه تراکنش نامشخص با مرکز"
+                            android:fontFamily="@font/iransansbold"
+                            android:textSize="@dimen/title"
+                            android:textColor="@color/blue_gray"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/path"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:visibility="gone"
+                    android:id="@+id/shift"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@drawable/white_background">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="right|center_vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:text="مدیریت نوبت کاری"
+                            android:fontFamily="@font/iransansbold"
+                            android:textSize="@dimen/titre"
+                            android:textColor="@color/dark"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:text="فعال و غیرفعال‌کردن نوبت‌کاری "
+                            android:fontFamily="@font/iransansbold"
+                            android:textSize="@dimen/title"
+                            android:textColor="@color/blue_gray"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/path"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:visibility="gone"
+                    android:id="@+id/second_receipt"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@drawable/white_background">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="right|center_vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:text="رسید دوم"
+                            android:fontFamily="@font/iransansbold"
+                            android:textSize="@dimen/titre"
+                            android:textColor="@color/dark"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:text="غیرفعال‌کردن چاپ رسید دوم و..."
+                            android:fontFamily="@font/iransansbold"
+                            android:textSize="@dimen/title"
+                            android:textColor="@color/blue_gray"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/path"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:visibility="gone"
+                    android:id="@+id/idbuy"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@drawable/white_background">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="right|center_vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:text="خرید شناسه دار"
+                            android:fontFamily="@font/iransansbold"
+                            android:textSize="@dimen/titre"
+                            android:textColor="@color/dark"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:text="پیمانه 99،ملت،بدون بررسی و ..."
+                            android:fontFamily="@font/iransansbold"
+                            android:textSize="@dimen/title"
+                            android:textColor="@color/blue_gray"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/path"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:visibility="gone"
+                    android:id="@+id/account"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@drawable/white_background">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="right|center_vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:text="انتخاب شماره حساب"
+                            android:fontFamily="@font/iransansbold"
+                            android:textSize="@dimen/titre"
+                            android:textColor="@color/dark"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:text="انتخاب شماره حساب پیش فرض پوز"
+                            android:fontFamily="@font/iransansbold"
+                            android:textSize="@dimen/title"
+                            android:textColor="@color/blue_gray"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/path"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:visibility="gone"
+                    android:id="@+id/shop_configuration"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@drawable/white_background">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="right|center_vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:text="دستگاه های جانبی"
+                            android:fontFamily="@font/iransansbold"
+                            android:textSize="@dimen/titre"
+                            android:textColor="@color/dark"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:text="فعال و غیرفعال‌کردن تراکنش روی پوز "
+                            android:fontFamily="@font/iransansbold"
+                            android:textSize="@dimen/title"
+                            android:textColor="@color/blue_gray"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/path"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:visibility="gone"
+                    android:id="@+id/sim_card"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@drawable/white_background">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="right|center_vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:text="مدیریت سیم کارت"
+                            android:fontFamily="@font/iransansbold"
+                            android:textSize="@dimen/titre"
+                            android:textColor="@color/dark"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:text="اعتبار سیم‌کارت، تنظیم‌APN"
+                            android:fontFamily="@font/iransansbold"
+                            android:textSize="@dimen/title"
+                            android:textColor="@color/blue_gray"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/path"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/wifi"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@drawable/white_background">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="right|center_vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:text="اتصال به wifi"
+                            android:fontFamily="@font/iransansbold"
+                            android:textSize="@dimen/titre"
+                            android:textColor="@color/dark"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:text="باز کردن تنظیمات wifi"
+                            android:fontFamily="@font/iransansbold"
+                            android:textSize="@dimen/title"
+                            android:textColor="@color/blue_gray"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:visibility="visible"
+                    android:id="@+id/data"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@drawable/white_background">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="right|center_vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:text="اتصال به داده تلفن همراه"
+                            android:fontFamily="@font/iransansbold"
+                            android:textSize="@dimen/titre"
+                            android:textColor="@color/dark"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:text="تنظیمات داده تلفن همراه"
+                            android:fontFamily="@font/iransansbold"
+                            android:textSize="@dimen/title"
+                            android:textColor="@color/blue_gray"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@drawable/white_background">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="right|center_vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:text="خرید شناسه دار"
+                            android:fontFamily="@font/iransansbold"
+                            android:textSize="@dimen/titre"
+                            android:textColor="@color/dark"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/iransansbold"
+                            android:textSize="@dimen/title"
+                            android:textColor="@color/blue_gray"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/path"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/sound_settings"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@drawable/white_background">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="right|center_vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:text="تنظیم صدا"
+                            android:fontFamily="@font/iransansbold"
+                            android:textSize="@dimen/titre"
+                            android:textColor="@color/dark"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:text="افزایش و کاهش میزان صدای دستگاه"
+                            android:fontFamily="@font/iransansbold"
+                            android:textSize="@dimen/title"
+                            android:textColor="@color/blue_gray"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/path"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </ScrollView>
+
+</layout>

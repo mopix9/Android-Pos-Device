@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layoutDirection="rtl">
+
+                <TableRow
+                    android:id="@+id/tableRow1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:background="@color/black_gray" >
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="600px"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3px"
+                        android:layout_marginRight="3px"
+                        android:layout_marginTop="3px"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/receipt_text_size"
+                        android:fontFamily="@font/iransansbold"
+                        android:text="نوع تراکنش" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="380px"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3px"
+                        android:layout_marginRight="3px"
+                        android:layout_marginTop="3px"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:textSize="@dimen/receipt_text_size"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/iransansbold"
+                        android:text="موفق" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="450px"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3px"
+                        android:layout_marginRight="3px"
+                        android:layout_marginTop="3px"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/receipt_text_size"
+                        android:fontFamily="@font/iransansbold"
+                        android:text="تراکنش ناموفق" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="450px"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3px"
+                        android:layout_marginRight="3px"
+                        android:layout_marginLeft="3px"
+                        android:layout_marginTop="3px"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/receipt_text_size"
+                        android:fontFamily="@font/iransansbold"
+                        android:text="مجموع(ریال)" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/black_gray" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3px"
+                        android:layout_marginRight="3px"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/receipt_text_size"
+                        android:fontFamily="@font/iransansbold"
+                        android:text="خرید" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/txtSuccessBuy"
+                        android:layout_marginBottom="3px"
+                        android:layout_marginRight="3px"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/iransansbold"
+                        android:textSize="@dimen/receipt_text_size"
+                        android:text="0" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/txtUnSuccessBuy"
+                        android:layout_marginBottom="3px"
+                        android:layout_marginRight="3px"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:textSize="@dimen/receipt_text_size"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/iransansbold"
+                        android:text="0" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/txtSumBuy"
+                        android:layout_marginBottom="3px"
+                        android:layout_marginLeft="3px"
+                        android:layout_marginRight="3px"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/receipt_text_size"
+                        android:fontFamily="@font/iransansbold"
+                        android:text="0" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/black_gray" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3px"
+                        android:layout_marginRight="3px"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/receipt_text_size"
+                        android:fontFamily="@font/iransansbold"
+                        android:text="قبض" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/txtSuccessBill"
+                        android:layout_marginBottom="3px"
+                        android:layout_marginRight="3px"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/iransansbold"
+                        android:textSize="@dimen/receipt_text_size"
+                        android:text="0" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/txtUnSuccessBill"
+                        android:layout_marginBottom="3px"
+                        android:layout_marginRight="3px"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/iransansbold"
+                        android:textSize="@dimen/receipt_text_size"
+                        android:text="0" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/txtSumBill"
+                        android:layout_marginBottom="3px"
+                        android:layout_marginLeft="3px"
+                        android:layout_marginRight="3px"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/iransansbold"
+                        android:textSize="@dimen/receipt_text_size"
+                        android:text="0" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/black_gray" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3px"
+                        android:layout_marginRight="3px"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/receipt_text_size"
+                        android:fontFamily="@font/iransansbold"
+                        android:text="شارژ" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/txtSuccessCharge"
+                        android:layout_marginBottom="3px"
+                        android:layout_marginRight="3px"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/receipt_text_size"
+                        android:fontFamily="@font/iransansbold"
+                        android:text="0" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/txtUnSuccessCharge"
+                        android:layout_marginBottom="3px"
+                        android:layout_marginRight="3px"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:textSize="@dimen/receipt_text_size"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/iransansbold"
+                        android:text="0" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/txtSumCharge"
+                        android:layout_marginBottom="3px"
+                        android:layout_marginLeft="3px"
+                        android:layout_marginRight="3px"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/iransansbold"
+                        android:textSize="@dimen/receipt_text_size"
+                        android:text="0" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/black_gray" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3px"
+                        android:layout_marginRight="3px"
+                        android:textSize="@dimen/receipt_text_size"
+                        android:paddingLeft="10px"
+                        android:paddingRight="10px"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:fontFamily="@font/iransansbold"
+                        android:text="شارژ مستقیم" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/txtSuccessTopup"
+                        android:layout_marginBottom="3px"
+                        android:layout_marginRight="3px"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/iransansbold"
+                        android:textSize="@dimen/receipt_text_size"
+                        android:text="0" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/txtUnSuccessTopup"
+                        android:layout_marginBottom="3px"
+                        android:layout_marginRight="3px"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/iransansbold"
+                        android:textSize="@dimen/receipt_text_size"
+                        android:text="0" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/txtSumTopup"
+                        android:layout_marginBottom="3px"
+                        android:layout_marginLeft="3px"
+                        android:layout_marginRight="3px"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/iransansbold"
+                        android:textSize="@dimen/receipt_text_size"
+                        android:text="0" />
+                </TableRow>
+
+                <TableRow
+                    android:visibility="gone"
+                    android:id="@+id/tableRow6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/black_gray" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3px"
+                        android:layout_marginRight="3px"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:textSize="@dimen/receipt_text_size"
+                        android:gravity="center"
+                        android:fontFamily="@font/iransansbold"
+                        android:text="بسته امنیت غذایی" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/txtSuccessFood"
+                        android:layout_marginBottom="3px"
+                        android:layout_marginRight="3px"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:fontFamily="@font/iransansbold"
+                        android:textSize="@dimen/receipt_text_size"
+                        android:text="0" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/txtUnSuccessFood"
+                        android:layout_marginBottom="3px"
+                        android:layout_marginRight="3px"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:fontFamily="@font/iransansbold"
+                        android:textSize="@dimen/receipt_text_size"
+                        android:text="0" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/txtFoodTotalAmount"
+                        android:layout_marginBottom="3px"
+                        android:layout_marginLeft="3px"
+                        android:layout_marginRight="3px"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:fontFamily="@font/iransansbold"
+                        android:textSize="@dimen/receipt_text_size"
+                        android:text="0" />
+                </TableRow>
+
+                <TableRow
+                    android:visibility="gone"
+                    android:id="@+id/tableRow7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/black_gray" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3px"
+                        android:layout_marginRight="3px"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:textSize="@dimen/receipt_text_size"
+                        android:gravity="center"
+                        android:fontFamily="@font/iransansbold"
+                        android:text="---------" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="3px"
+                        android:layout_marginRight="3px"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:fontFamily="@font/iransansbold"
+                        android:textSize="@dimen/receipt_text_size"
+                        android:text="-" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="3px"
+                        android:layout_marginRight="3px"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:fontFamily="@font/iransansbold"
+                        android:textSize="@dimen/receipt_text_size"
+                        android:text="-" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="3px"
+                        android:layout_marginLeft="3px"
+                        android:layout_marginRight="3px"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:fontFamily="@font/iransansbold"
+                        android:textSize="@dimen/receipt_text_size"
+                        android:text="-" />
+                </TableRow>
+
+                <TableRow
+                    android:visibility="gone"
+                    android:id="@+id/tableRow8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/black_gray" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3px"
+                        android:layout_marginRight="3px"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:textSize="@dimen/receipt_text_size"
+                        android:fontFamily="@font/iransansbold"
+                        android:text="---------" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="3px"
+                        android:layout_marginRight="3px"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:textSize="@dimen/receipt_text_size"
+                        android:fontFamily="@font/iransansbold"
+                        android:text="-" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="3px"
+                        android:layout_marginRight="3px"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:fontFamily="@font/iransansbold"
+                        android:textSize="@dimen/receipt_text_size"
+                        android:text="-" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="3px"
+                        android:layout_marginLeft="3px"
+                        android:layout_marginRight="3px"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:fontFamily="@font/iransansbold"
+                        android:textSize="@dimen/receipt_text_size"
+                        android:text="-" />
+                </TableRow>
+
+            </TableLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

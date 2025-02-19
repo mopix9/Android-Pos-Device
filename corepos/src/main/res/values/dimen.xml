@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="receipt_line_height">7px</dimen>
+    <dimen name="receipt_table_line_width">4px</dimen>
+    <dimen name="receipt_text_size_tiny">63px</dimen>
+    <dimen name="receipt_text_size_small">68px</dimen>
+    <dimen name="receipt_text_size">73px</dimen>
+    <dimen name="aryan_receipt_text_small_size">18px</dimen>
+    <dimen name="aryan_receipt_text_size">21px</dimen>
+    <dimen name="receipt_text_size_larg">85px</dimen>
+    <dimen name="receipt_text_size_larg2">95px</dimen>
+    <dimen name="receipt_text_height">110px</dimen>
+    <dimen name="receipt_width">1080px</dimen>
+    <dimen name="aryan_receipt_width">384px</dimen>
+    <dimen name="receipt_small_width">800px</dimen>
+    <dimen name="receipt_width_700">700px</dimen>
+
+    <dimen name="mini">13sp</dimen>
+    <dimen name="content">16sp</dimen>
+    <dimen name="title">18sp</dimen>
+    <dimen name="titre">22sp</dimen>
+    <dimen name="medium_titre">26sp</dimen>
+    <dimen name="large_titre">32sp</dimen>
+
+    <dimen name="pub_text_size_20">20dp</dimen>
+    <dimen name="pub_text_size_30">30dp</dimen>
+
+    <dimen name="dp0">0dp</dimen>
+    <dimen name="dp10">10dp</dimen>
+    <dimen name="dp12">12dp</dimen>
+    <dimen name="dp13">13dp</dimen>
+    <dimen name="dp40">40dp</dimen>
+    <dimen name="sp20">20sp</dimen>
+    <dimen name="sp26">26sp</dimen>
+    <dimen name="sp30">30sp</dimen>
+
+</resources>

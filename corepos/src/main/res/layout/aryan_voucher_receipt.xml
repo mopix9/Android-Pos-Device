@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="@dimen/aryan_receipt_width"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="@dimen/aryan_receipt_width"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txt_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="3px"
+            android:fontFamily="@font/yekan"
+            android:includeFontPadding="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/aryan_receipt_text_size"
+            tools:text="عملیات موفق" />
+
+        <TextView
+            android:id="@+id/txt_amount_or_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="3px"
+            android:layout_marginRight="10px"
+            android:layout_toLeftOf="@id/txt_result"
+            android:fontFamily="@font/yekan"
+            android:gravity="left"
+            android:includeFontPadding="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/aryan_receipt_text_size"
+            tools:text="1000 ریال" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/failMessageLayout"
+        android:layout_width="@dimen/aryan_receipt_width"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="@dimen/receipt_width"
+            android:layout_height="@dimen/receipt_line_height"
+            android:layout_marginTop="6px"
+            android:background="@color/black" />
+
+        <TextView
+            android:id="@+id/txtDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0px"
+            android:fontFamily="@font/yekan"
+            android:includeFontPadding="false"
+            android:text="@string/receipt_unsuccessful_message"
+            android:textColor="@color/black"
+            android:textSize="@dimen/aryan_receipt_text_size" />
+
+        <View
+            android:id="@+id/lineBelowOfFail"
+            android:layout_width="@dimen/receipt_width"
+            android:layout_height="@dimen/receipt_line_height"
+            android:layout_marginTop="6px"
+            android:background="@color/black"
+            android:visibility="visible" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/lnr_success"
+        android:layout_width="@dimen/aryan_receipt_width"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/voucherSerialLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="0px"
+                android:fontFamily="@font/yekan"
+                android:includeFontPadding="false"
+                android:text="سریال شارژ:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/aryan_receipt_text_size" />
+
+            <TextView
+                android:id="@+id/voucherSerial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="8px"
+                android:fontFamily="@font/traffic"
+                android:includeFontPadding="false"
+                android:text="----------"
+                android:textColor="@color/black"
+                android:textSize="@dimen/aryan_receipt_text_size" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/voucherCodeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="0px"
+                android:fontFamily="@font/yekan"
+                android:includeFontPadding="false"
+                android:text="کد شارژ:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/aryan_receipt_text_size" />
+
+            <TextView
+                android:id="@+id/voucherCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="8px"
+                android:fontFamily="@font/traffic"
+                android:includeFontPadding="false"
+                android:text="----------"
+                android:textColor="@color/black"
+                android:textSize="@dimen/aryan_receipt_text_size" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/voucherGuideLayout">
+
+            <View
+                android:layout_width="@dimen/aryan_receipt_width"
+                android:layout_height="@dimen/receipt_table_line_width"
+                android:layout_marginTop="6px"
+                android:background="@color/black" />
+
+            <RelativeLayout
+                android:id="@+id/guide_rightel"
+                android:layout_width="@dimen/aryan_receipt_width"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/yekan"
+                    android:layout_alignParentRight="true"
+                    android:includeFontPadding="false"
+                    android:text="دستور:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/aryan_receipt_text_size" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity=""
+                    android:layout_alignParentLeft="true"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/yekan"
+                        android:includeFontPadding="false"
+                        android:text="*141*"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/aryan_receipt_text_size" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/yekan"
+                        android:includeFontPadding="false"
+                        android:text="رمز"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/aryan_receipt_text_size" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="# Yes-Ok"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/aryan_receipt_text_size" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/guide_irancel"
+                android:layout_width="@dimen/aryan_receipt_width"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/yekan"
+                    android:layout_alignParentRight="true"
+                    android:includeFontPadding="false"
+                    android:text="دستور:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/aryan_receipt_text_size" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity=""
+                    android:layout_alignParentLeft="true"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/yekan"
+                        android:includeFontPadding="false"
+                        android:text="*141*"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/aryan_receipt_text_size" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/yekan"
+                        android:includeFontPadding="false"
+                        android:text="رمز"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/aryan_receipt_text_size" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="# Yes-Ok"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/aryan_receipt_text_size"/>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/guide_hamrah_aval"
+                android:layout_width="@dimen/aryan_receipt_width"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/yekan"
+                    android:layout_alignParentRight="true"
+                    android:includeFontPadding="false"
+                    android:text="دستور:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/aryan_receipt_text_size" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity=""
+                    android:layout_alignParentLeft="true"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/yekan"
+                        android:includeFontPadding="false"
+                        android:text="*140*"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/aryan_receipt_text_size" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="#"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/aryan_receipt_text_size" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/yekan"
+                        android:includeFontPadding="false"
+                        android:text="رمز"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/aryan_receipt_text_size" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="# Yes-Ok"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/aryan_receipt_text_size" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+            <View
+                android:layout_width="@dimen/aryan_receipt_width"
+                android:layout_height="@dimen/receipt_table_line_width"
+                android:layout_marginTop="6px"
+                android:background="@color/black" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/aryan_receipt_width"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/footer_aryan"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/container" />
+
+</LinearLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="@dimen/receipt_width"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/txt_merchant_name"
+            android:layout_width="@dimen/receipt_width"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/iransansbold"
+            android:gravity="center_horizontal"
+            android:includeFontPadding="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/receipt_text_size"
+            tools:text="نام پذیرنده" />
+
+        <RelativeLayout
+            android:layout_width="@dimen/receipt_width"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/traffic"
+                android:includeFontPadding="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/receipt_text_size"
+                tools:text="1398/1/11" />
+
+            <TextView
+                android:id="@+id/txt_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/traffic"
+                android:includeFontPadding="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/receipt_text_size"
+                tools:text="4:42" />
+
+        </RelativeLayout>
+
+        <include android:id="@+id/dailyHeader" layout="@layout/daily_header" android:visibility="gone"/>
+        <include android:id="@+id/successHeader" layout="@layout/success_header" android:visibility="gone"/>
+        <include android:id="@+id/dateTimeHeader" layout="@layout/date_header" android:visibility="gone"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_details"
+            android:layout_width="@dimen/receipt_width"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/footer"
+            android:layout_width="850px"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="25px"
+            android:src="@drawable/shaparak_psp" />
+
+    </LinearLayout>
+
+</layout>

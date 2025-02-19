@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/receipt_width"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        app:cardBackgroundColor="@color/white">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="@dimen/receipt_width"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/txtDate"
+                android:textSize="@dimen/receipt_text_size"
+                android:text="date"
+                android:textColor="@color/black"
+                android:fontFamily="@font/traffic"
+                android:layout_marginTop="6px"
+                android:layout_marginBottom="6px"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:id="@+id/container">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.43"
+                    android:layout_gravity="center"
+                    android:id="@+id/txtAmount"
+                    android:textSize="@dimen/receipt_text_size"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/traffic"
+                    android:text="date"
+                    android:layout_marginTop="6px"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.005"
+                    android:background="@color/black"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.28"
+                    android:layout_gravity="center"
+                    android:id="@+id/txtTrackingNumber"
+                    android:textSize="@dimen/receipt_text_size"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:fontFamily="@font/traffic"
+                    android:text="date"
+                    android:layout_marginTop="6px"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.005"
+                    android:background="@color/black"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.28"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="@dimen/receipt_text_size"
+                    android:textColor="@color/black"
+                    android:id="@+id/txtTime"
+                    android:fontFamily="@font/traffic"
+                    android:text="date"
+                    android:layout_marginTop="6px"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
